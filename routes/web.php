@@ -13,16 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::middleware('role:admin')->get('/dashboard',function() {
+Route::get('/', 'HomeController@beranda')->name('beranda');
+Route::get('/dashboard',function() {
     return 'Dashboard';
 })->name('dashboard');
+
 Route::resource('kamar','kamarController');
 Route::resource('faskamar','fasilitaskmrController');
 Route::resource('fashotel','fasilitashotelController');

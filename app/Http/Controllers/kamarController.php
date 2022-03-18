@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\kamar;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class kamarController extends Controller
 {
@@ -14,7 +15,8 @@ class kamarController extends Controller
      */
     public function index()
     {
-        //
+        $kamar = kamar::latest()->paginate(10);
+        return view('kamar.index',compact('kamar'));
     }
 
     /**
@@ -24,7 +26,7 @@ class kamarController extends Controller
      */
     public function create()
     {
-        //
+        return view('kamar.create');
     }
 
     /**
@@ -35,7 +37,14 @@ class kamarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'fas_kamar' => 'required',
+            'tipe_kamar' => 'required',
+            'jml_kamar' => 'required',
+           
+        ]);
+        kamar::create($request->all());
+        return redirect()->route('kamar.index')->with('success','Data berhasil di input');
     }
 
     /**
@@ -46,7 +55,7 @@ class kamarController extends Controller
      */
     public function show(kamar $kamar)
     {
-        //
+        return view('kamar.show',compact('kamar'));
     }
 
     /**
@@ -55,9 +64,12 @@ class kamarController extends Controller
      * @param  \App\kamar  $kamar
      * @return \Illuminate\Http\Response
      */
-    public function edit(kamar $kamar)
+    public function edit($kamar)
     {
-        //
+        //dd($kamar);
+        $kamar = DB::table('kamar')->where('id_kamar', $kamar)->get();
+        //dd($kamar);
+         return view('kamar.edit', compact('kamar'));
     }
 
     /**
@@ -69,7 +81,20 @@ class kamarController extends Controller
      */
     public function update(Request $request, kamar $kamar)
     {
-        //
+        $request->validate([
+            'fas_kamar' => 'required',
+            'tipe_kamar' => 'required',
+            'jml_kamar' => 'required',
+        ]);
+        // dd($request->id_kamar);
+        $update = DB::table('kamar')
+              ->where('id_kamar', $request->id_kamar)
+              ->update([
+                  'fas_kamar' => $request->fas_kamar,
+                  'tipe_kamar' => $request->tipe_kamar,
+                  'jml_kamar' => $request->jml_kamar,
+              ]);
+        return redirect()->route('kamar.index')->with('success','Data berhasil di update');
     }
 
     /**
@@ -80,6 +105,7 @@ class kamarController extends Controller
      */
     public function destroy(kamar $kamar)
     {
-        //
+        $kamar->delete();
+        return redirect()->route('kamar.index')->with('success','Data berhasil dihapus');
     }
 }
