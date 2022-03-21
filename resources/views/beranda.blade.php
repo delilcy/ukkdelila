@@ -39,10 +39,7 @@
         <a class="nav-link disabled" href="#"></a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    
   </div>
 </nav>
     <title>Strawberries Golden Hotel</title>
@@ -102,58 +99,133 @@
         </p>
       </div>
     </div>
+    <!-- <div class="row g-3 align-items-center">
+  <div class="col-auto">
+    <label for="inputPassword5" class="col-form-label">Check in</label>
+  </div>
+  <div class="col-auto">
+    <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpInline">
+  </div>
+  <div class="col-auto">
+    
+  </div>
+</div>
 
+<div class="row g-3 align-items-center">
+  <div class="col-auto">
+    <label for="inputPassword5" class="col-form-label">Check Out</label>
+  </div>
+  <div class="col-auto">
+    <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpInline">
+  </div>
+  <div class="col-auto">
+    
+  </div>
+</div>
 
+<div class="row g-3 align-items-center">
+  <div class="col-auto">
+    <label for="inputPassword5" class="col-form-label">Jumlah Kamar</label>
+  </div>
+  <div class="col-auto">
+    <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpInline">
+  </div>
+  <div class="col-auto">
+    
+  </div>
+</div>
+<button type="button" class="btn btn-secondary">Secondary</button> -->
+<div class="row g-2">
+  <div class="col-md">
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com">
+      <label for="floatingInputGrid">Check In</label>
+    </div>
+  </div>
+  <div class="col-md">
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com">
+      <label for="floatingInputGrid">Check Out</label>
+    </div>
+  </div>
+  <div class="col-md">
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com">
+      <label for="floatingInputGrid">Jumlah Kamar</label>
+    </div>
+  </div>
+  <div class="col-md">
+    <div class="form-floating">
+  <button type="submit" class="btn btn-primary btn-lg btn-block" style="height: 55px">Pesan</button>
+     
+    </div>
+  </div>
+  
+</div>
     
   </section>
 
+  
+  <div class="card">
+  <div class="card-body">
+  <p class="fs-2">Rooms & Suites</p>
+  <p class="font-monospace">Strawberries Golden Hotel stunning and exquisite interior design incorporates both traditional and modern features. </p>
+  
+  </div>
+</div>
   <div class="album py-5 bg-light">
     <div class="container">
 
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
         <div class="col">
           <div class="card shadow-sm">
-            <img class="bd-placeholder-img card-img-top" src="{{ asset('img/suite.jpg') }}" width="100%" height="225"  role="img"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".10em">Room Only</text></img>
+            <img class="bd-placeholder-img card-img-top" src="{{ asset('img/suite.jpg') }}" width="100%" height="225"  role="img"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".10em"></text></img>
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Superior Room</p>
+              <p class="card-text-font-monospace">Kamar berukuran luas 32 m2
+              Kamar mandi shower</p>
+              
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                 </div>
-                <small class="text-muted">9 mins</small>
+               
               </div>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <img class="bd-placeholder-img card-img-top" src="{{ asset('img/deluxe.jpg') }}" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/>
+            <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
 
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Deluxe Room</p>
+              <p class="card-text">Memiliki ukuran luas standar sekitar 40 meter persegi</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                 </div>
-                <small class="text-muted">9 mins</small>
+               
               </div>
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <img class="bd-placeholder-img card-img-top" src="{{ asset('img/premier.jpg') }}" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
 
             <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Premier Room</p>
+              <p class="card-text">Memiliki ukuran 30 m2 dan kasur ukuran queen</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                 </div>
-                <small class="text-muted">9 mins</small>
+                
               </div>
             </div>
           </div>
