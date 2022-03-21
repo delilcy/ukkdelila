@@ -34,5 +34,7 @@ class UserSeeder extends Seeder
         ]);
 
         $resepsionis->assignRole('resepsionis');
+
+        
     }   
 }

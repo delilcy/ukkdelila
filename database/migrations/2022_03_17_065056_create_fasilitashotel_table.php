@@ -17,6 +17,7 @@ class CreateFasilitashotelTable extends Migration
             $table->id('id_fashotel');
             $table->string('nm_fashotel');
             $table->string('keterangan');
+            $table->string('gambar');
             $table->timestamps();
         });
     }
