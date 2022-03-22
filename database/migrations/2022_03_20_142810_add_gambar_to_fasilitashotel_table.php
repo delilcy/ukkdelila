@@ -14,7 +14,7 @@ class AddGambarToFasilitashotelTable extends Migration
     public function up()
     {
         Schema::table('fasilitashotel', function (Blueprint $table) {
-            $table->string('gambar');
+            // $table->string('gambar');
         });
     }
 

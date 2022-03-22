@@ -14,7 +14,7 @@ class AddNotlpToReservasiTable extends Migration
     public function up()
     {
         Schema::table('reservasi', function (Blueprint $table) {
-            $table->string('notlp');
+            // $table->string('notlp');
         });
     }
 

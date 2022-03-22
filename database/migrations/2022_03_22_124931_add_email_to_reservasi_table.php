@@ -14,7 +14,7 @@ class AddEmailToReservasiTable extends Migration
     public function up()
     {
         Schema::table('reservasi', function (Blueprint $table) {
-            $table->text('email');
+            // $table->text('email');
         });
     }
 

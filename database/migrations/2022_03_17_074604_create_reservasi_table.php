@@ -20,6 +20,8 @@ class CreateReservasiTable extends Migration
             $table->integer('jml_kmr');
             $table->string('nm_pemesan');
             $table->string('nm_tamu');
+            $table->string('email');
+            $table->string('notlp');
             $table->string('tipe_kmr');
             $table->timestamps();
         });
