@@ -31,5 +31,6 @@ Route::resource('fashotel','fasilitashotelController');
 Route::resource('admin','adminController');
 Route::resource('resepsionis','resepsionisController');
 Route::resource('tamu','tamuController');
-Route::resource('reservasi','reservasiController');
+// Route::resource('reservasi','reservasiController');
 
+Route::post('/pesan', 'PesanController@index')->name('pesan');

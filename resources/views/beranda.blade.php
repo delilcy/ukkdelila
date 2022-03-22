@@ -25,9 +25,7 @@
         <a class="nav-link" href="#">Home</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
+
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#"></a>
           <a class="dropdown-item" href="#"></a>
@@ -54,6 +52,24 @@
 <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
     <style>
+    .margin1{
+      margin-right: 50px;
+    }
+    .margin2{
+      margin-right: 120px;
+    }
+    .margin3{
+      margin-right: 84px;
+    }
+    .margin4{
+      margin-right: 75px;
+    }
+    .margin5{
+      margin-right: 75px;
+    }
+    .margin6{
+      margin-right: 60px;
+    }
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -135,34 +151,100 @@
   </div>
 </div>
 <button type="button" class="btn btn-secondary">Secondary</button> -->
+<form action="{{ route('pesan') }}" method="POST">
+    @csrf
+    @if ($message = Session::get('success'))
+        <div class="alert alert-success">
+            <p>{{ $message }}</p>
+        </div>
+    @endif
 <div class="row g-2">
   <div class="col-md">
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com">
+      <input type="date" name="tglcekin" class="form-control" id="floatingInputGrid" placeholder="name@example.com">
       <label for="floatingInputGrid">Check In</label>
     </div>
   </div>
   <div class="col-md">
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com">
+      <input type="date" name="tglcekout" class="form-control" id="floatingInputGrid" placeholder="name@example.com">
       <label for="floatingInputGrid">Check Out</label>
     </div>
   </div>
   <div class="col-md">
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInputGrid" placeholder="name@example.com">
+      <input type="number" name="jml_kmr" class="form-control" id="floatingInputGrid" placeholder="name@example.com">
       <label for="floatingInputGrid">Jumlah Kamar</label>
     </div>
   </div>
   <div class="col-md">
     <div class="form-floating">
-  <button type="submit" class="btn btn-primary btn-lg btn-block" style="height: 55px">Pesan</button>
+  <!-- <a class="btn btn-primary btn-lg btn-block" style="height: 35px align-items-center">Pesan</a> -->
      
     </div>
   </div>
   
 </div>
-    
+<br>
+<div class="row g-3 align-items-center">
+  <div class="col-3">
+    <label for="inputPassword6" class="form-label margin1">Nama Pemesan</label>
+  </div>
+  <div class="col-md-5">
+    <input type="text" name="nm_pemesan" class="form-control" aria-describedby="passwordHelpInline">
+  </div>
+  <div class="col-md-5">
+  </div>
+</div>
+<br>
+<div class="row g-3 align-items-center">
+  <div class="col-3">
+    <label for="inputPassword6" class="form-label margin2">Email</label>
+  </div>
+  <div class="col-md-5">
+    <input type="text" name="email" class="form-control" aria-describedby="passwordHelpInline">
+  </div>
+</div>
+<br>
+<div class="row g-3 align-items-center">
+  <div class="col-3">
+    <label for="inputPassword6" class="form-label margin3">No Telpon</label>
+  </div>
+  <div class="col-md-5">
+    <input type="text" name="notlp" class="form-control" aria-describedby="passwordHelpInline">
+  </div>
+</div>
+<br>
+<div class="row g-3 align-items-center">
+  <div class="col-3">
+    <label for="inputPassword6" class="form-label margin4">Nama Tamu</label>
+  </div>
+  <div class="col-md-5">
+    <input type="text" name="nm_tamu" class="form-control" aria-describedby="passwordHelpInline">
+  </div>
+  <div class="col-md-5">
+  </div>
+</div>
+
+<br>
+<div class="row g-3 align-items-center">
+  <div class="col-3">
+    <label for="inputPassword6" class="form-label margin5">Tipe Kamar</label>
+  </div>
+  <div class="col-md-5">
+  
+  <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="tipe_kmr">
+  <option selected>tipe kamar</option>
+  <option value="1">Superior Room</option>
+  <option value="2">Deluxe Room</option>
+  <option value="3">Premier Room</option>
+</select>
+  </div>
+  <div class="col-md-5">
+  </div>
+</div>
+  <button type="submit" class="btn btn-primary">Konfirmasi</button>
+  </form>
   </section>
 
   
