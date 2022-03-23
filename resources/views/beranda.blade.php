@@ -16,7 +16,7 @@
               <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
                       <a class="nav-link" href="#">
-                          <img src="{{ asset('img/str.jpg') }}" width="30" height="30" class="d-inline-block align-top" alt="">
+                          <img src="{{ asset('img/tro.jpg') }}" width="30" height="30" class="d-inline-block align-top" alt="">
                           Strawberries Golden Hotel<span class="sr-only-bold">
 
                           </span></a>

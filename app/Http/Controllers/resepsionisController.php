@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\resepsionis;
+use App\reservasi;
 use Illuminate\Http\Request;
 
 class resepsionisController extends Controller
@@ -14,8 +14,8 @@ class resepsionisController extends Controller
      */
     public function index()
     {
-        $resepsionis = resepsionis::latest()->paginate(10);
-        return view('resepsionis.index');
+        $reservasi = reservasi::latest()->paginate(10);
+        return view('reservasi.index');
     }
 
     public function cari(Request $request)

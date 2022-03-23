@@ -25,7 +25,7 @@ class reservasiController extends Controller
      */
     public function create()
     {
-        //
+        return view('reservasi.create');
     }
 
     /**

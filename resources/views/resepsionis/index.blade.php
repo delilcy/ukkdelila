@@ -16,7 +16,7 @@
               <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
                       <a class="nav-link" href="#">
-                          <img src="{{ asset('img/str.jpg') }}" width="30" height="30" class="d-inline-block align-top" alt="">
+                          <img src="{{ asset('img/tro.jpg') }}" width="30" height="30" class="d-inline-block align-top" alt="">
                           Strawberries Golden Hotel<span class="sr-only-bold">
 
                           </span></a>
@@ -24,20 +24,6 @@
                   <li class="nav-item">
                       <a class="nav-link" href="#">Home</a>
                   </li>
-                  <li class="nav-item dropdown">
-
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="#"></a>
-                          <a class="dropdown-item" href="#"></a>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item" href="#"></a>
-                      </div>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link disabled" href="#"></a>
-                  </li>
-              </ul>
-
           </div>
       </nav>
       <title>Strawberries Golden Hotel</title>
@@ -110,7 +96,7 @@
       </header>
 
       <main>
-
+      
           <section class="py-5 text-center container">
               <div class="row py-lg-5">
                   <div class="col-lg-6 col-md-8 mx-auto">
@@ -122,6 +108,16 @@
                       </p>
                   </div>
               </div>
+              <div class="row justify-content-center mb-10">
+          <div class="col-md-3">
+            <form action="/posts">
+                <div class="input-group mb-5">
+                    <input type="text" class="from-control" placeholder="Search.." name="Search">
+                    <button class="btn btn-danger" type="submit">Search</button>
+                </div>
+            </form>
+            </div>
+    </div>
               <!-- <div class="row g-3 align-items-center">
   <div class="col-auto">
     <label for="inputPassword5" class="col-form-label">Check in</label>
