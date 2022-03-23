@@ -14,7 +14,8 @@ class reservasiController extends Controller
      */
     public function index()
     {
-        //
+        $reservasi = reservasi::latest()->paginate(10);
+        return view('reservasi.index',compact('reservasi'));
     }
 
     /**

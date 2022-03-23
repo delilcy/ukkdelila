@@ -14,7 +14,17 @@ class resepsionisController extends Controller
      */
     public function index()
     {
-        //
+        $resepsionis = resepsionis::latest()->paginate(10);
+        return view('resepsionis.index');
+    }
+
+    public function cari(Request $request)
+    {
+        # code...
+    }
+    public function filter(Request $request)
+    {
+        # code...
     }
 
     /**

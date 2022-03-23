@@ -1,4 +1,4 @@
-  <!doctype html>
+<!doctype html>
   <html lang="en">
   <head>
       <meta charset="utf-8">
@@ -37,12 +37,10 @@
                       <a class="nav-link disabled" href="#"></a>
                   </li>
               </ul>
-    
 
           </div>
       </nav>
       <title>Strawberries Golden Hotel</title>
-      
 
 
 
@@ -112,10 +110,6 @@
       </header>
 
       <main>
-      <div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
-</div>
 
           <section class="py-5 text-center container">
               <div class="row py-lg-5">
