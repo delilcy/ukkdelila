@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\reservasi;
+use DB;
 use Illuminate\Http\Request;
 
 class reservasiController extends Controller
@@ -18,6 +19,16 @@ class reservasiController extends Controller
         return view('reservasi.index',compact('reservasi'));
     }
 
+    public function search(Request $request)
+    {
+        $reservasi=  DB::table('reservasi')->where('nm_tamu', $request->nm_tamu )->paginate(10);
+        return view('reservasi.index', compact('reservasi'));
+    }
+    public function filter(Request $request)
+    {
+        $reservasi=  DB::table('reservasi')->where('tglcekin', $request->tglcekin )->paginate(10);
+        return view('reservasi.index', compact('reservasi'));
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -51,6 +62,7 @@ class reservasiController extends Controller
             dd($request);
     return redirect()->route('reservasi.index')->with('success','Data berhasil di input');
     }
+
 
     /**
      * Display the specified resource.

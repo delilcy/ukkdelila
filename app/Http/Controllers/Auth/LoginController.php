@@ -44,10 +44,10 @@ class LoginController extends Controller
     {
        
         if ($user->hasRole('tamu')){
-            return redirect()->route('dashboard');
+            return redirect()->route('beranda');
         }
 
 
-        return redirect()->route('beranda');
+        return redirect()->route('home');
     }
 }

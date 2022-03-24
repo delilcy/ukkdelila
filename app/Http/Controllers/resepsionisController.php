@@ -15,21 +15,23 @@ class resepsionisController extends Controller
     public function index()
     {
         $reservasi = reservasi::latest()->paginate(10);
-        return view('reservasi.index');
+        return view('reservasi.index', compact('reservasi'));
     }
 
-    public function cari(Request $request)
+    public function search(Request $request)
     {
-        # code...
+        $reservasi=  DB::table('reservasi')->where('nm_tamu', $request->nm_tamu )->get();
+        return view('reservasi.index', compact('reservasi'));
     }
     public function filter(Request $request)
     {
-        # code...
+        $reservasi=  DB::table('reservasi')->where('tglcekin', $request->tglcekin )->get();
+        return view('reservasi.index', compact('reservasi'));
     }
 
     /**
      * Show the form for creating a new resource.
-     *
+     *\
      * @return \Illuminate\Http\Response
      */
     public function create()

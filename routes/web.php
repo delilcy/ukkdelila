@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\http\Controllers\resepsionisController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,8 @@ Route::resource('admin','adminController');
 Route::resource('resepsionis','resepsionisController');
 Route::resource('tamu','tamuController');
 Route::resource('reservasi','reservasiController');
+Route::post('/resepsionis/search', 'reservasiController@search')->name('search');
+Route::post('/resepsionis/filter', 'reservasiController@filter')->name('reservasi.filter');
 
 Route::post('/pesan', 'PesanController@index')->name('pesan');
 

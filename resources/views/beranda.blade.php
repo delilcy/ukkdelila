@@ -6,6 +6,10 @@
       <meta name="description" content="">
       <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
       <meta name="generator" content="Hugo 0.88.1">
+      <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+      <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+      <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+      <script src="{{ asset('js/app.js') }}"></script>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand" href="#"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,6 +28,23 @@
                   <li class="nav-item">
                       <a class="nav-link" href="#">Home</a>
                   </li>
+                  <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
                   <li class="nav-item dropdown">
 
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -104,6 +125,7 @@
               <a href="#" class="navbar-brand d-flex align-items-center">
 
               </a>
+              
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
               </button>
@@ -112,20 +134,13 @@
       </header>
 
       <main>
-      <div class="input-group mb-3">
-  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
-</div>
 
           <section class="py-5 text-center container">
               <div class="row py-lg-5">
                   <div class="col-lg-6 col-md-8 mx-auto">
                       <h1 class="fw-bold">Welcome to Strawberries Golden Hotel</h1>
                       <p class="font-monospace">Curating the world's best luxury hotel experience for you </p>
-                      <p>
-                          <a href="#" class="btn btn-outline-secondary my-2">Login</a>
-                          <a href="#" class="btn btn-outline-secondary my-2">Register</a>
-                      </p>
+             
                   </div>
               </div>
               <!-- <div class="row g-3 align-items-center">
@@ -289,7 +304,7 @@
                           <div class="card shadow-sm">
                               <img class="bd-placeholder-img card-img-top" src="{{ asset('img/suite.jpg') }}" width="100%" height="225" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
                               <title>Placeholder</title>
-                              <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".10em"></text></img>
+                              <rect width="100%" height="100%" fill="#55595c"  /><text x="50%" y="50%" fill="#eceeef" dy=".10em"></text></img>
                               <div class="card-body">
                                   <p class="card-text">Superior Room</p>
                                   <p class="card-text-font-monospace">Kamar berukuran luas 32 m2
