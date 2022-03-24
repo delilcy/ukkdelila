@@ -51,8 +51,12 @@ class fasilitashotelController extends Controller
      * @param  \App\fasilitashotel  $fasilitashotel
      * @return \Illuminate\Http\Response
      */
-    public function show(fasilitashotel $fasilitashotel)
+    public function show( $fashotel)
     {
+        $fasilitashotel=DB::table('fasilitashotel')
+        ->where('id_fashotel', $fashotel)
+        ->get();
+        // dd($fasilitashotel);
         return view('fashotel.show',compact('fasilitashotel'));
     }
 

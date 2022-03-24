@@ -51,8 +51,12 @@ class fasilitaskmrController extends Controller
      * @param  \App\fasilitaskmr  $fasilitaskmr
      * @return \Illuminate\Http\Response
      */
-    public function show(fasilitaskmr $fasilitaskmr)
+    public function show($faskamar)
     {
+        $fasilitaskmr=DB::table('fasilitaskmr')
+        ->where('id_faskmr', $faskamar)
+        ->get();
+        // dd($fasilitaskmr);
         return view('faskamar.show',compact('fasilitaskmr'));
     }
 
