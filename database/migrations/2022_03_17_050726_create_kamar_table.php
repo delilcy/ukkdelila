@@ -15,7 +15,6 @@ class CreateKamarTable extends Migration
     {
         Schema::create('kamar', function (Blueprint $table) {
             $table->id('id_kamar');
-            $table->string('fas_kamar');
             $table->string('tipe_kamar');
             $table->integer('jml_kamar');
             $table->timestamps();

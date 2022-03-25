@@ -7,6 +7,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html lang="en">
 <head>
   @include('template.head')
+  <style>
+    .main-sidebar{
+        min-height:109% !important;
+    }
+  </style>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -50,10 +55,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
    
          <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Nama Fasilitas Kamar:</strong>
-                    <input type="text" name="fas_kamar" value="{{ $kamar[0]->fas_kamar }}" class="form-control" placeholder="nama">
-                </div>
             </div>
             <input type="hidden" name="id_kamar" value="{{ $kamar[0]->id_kamar }}">
             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -68,6 +69,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <input type="number" class="form-control "name="jml_kamar" placeholder="jumlah kamar" value="{{ $kamar[0]->jml_kamar }}">
                 </div>
             </div>
+            <br>
+            <br>
+            <br>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
               <button type="submit" class="btn btn-primary">EDIT</button>
             </div>
@@ -75,7 +79,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
    
     </form>
   <!-- /.content-wrapper -->
+  </div>
   <!-- Control Sidebar -->
+  </div>
   <!-- <aside class="control-sidebar control-sidebar-dark">
     Control sidebar content goes here
     <div class="p-3">

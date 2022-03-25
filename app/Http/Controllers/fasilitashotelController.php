@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\fasilitashotel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Image;
 
 class fasilitashotelController extends Controller
 {
@@ -37,11 +38,26 @@ class fasilitashotelController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request);
         $request->validate([
             'nm_fashotel' => 'required',
             'keterangan' => 'required',
+            'gambar' => 'required',
         ]);
-        fasilitashotel::create($request->all());
+        $image = $request->file('gambar');
+        $nameImage = $request->file('gambar')->getClientOriginalName();
+    
+        $thumbImage = Image::make($image->getRealPath())->resize(100, 100);
+        $thumbPath = public_path() . '/fasilitashotel/' . $nameImage;
+        $thumbImage = Image::make($thumbImage)->save($thumbPath);
+    
+        $oriPath = public_path() . '/fasilitashotel2/' . $nameImage;
+        $oriImage = Image::make($image)->save($oriPath);
+        fasilitashotel::create([
+            'nm_fashotel' => $request->nm_fashotel,
+            'keterangan' => $request->keterangan,
+            'gambar' => $nameImage,
+        ]);
         return redirect()->route('fashotel.index')->with('success','Data berhasil di input');
     }
 
@@ -86,6 +102,7 @@ class fasilitashotelController extends Controller
         $request->validate([
             'nm_fashotel' => 'required',
             'keterangan' => 'required',
+            'gambar' => 'required',
         ]);
         // dd($request->id_fashotel);
         $update = DB::table('fasilitashotel')
@@ -93,6 +110,7 @@ class fasilitashotelController extends Controller
               ->update([
                   'nm_fashotel' => $request->nm_fashotel,
                   'keterangan' => $request->keterangan,
+                  'gambar' => $request->gambar,
               ]);
         return redirect()->route('fashotel.index')->with('success','Data berhasil di update');
     }

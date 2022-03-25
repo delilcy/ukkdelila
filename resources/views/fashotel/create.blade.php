@@ -44,7 +44,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </div>
 @endif
    
-<form action="{{ route('fashotel.store') }}" method="POST">
+<form action="{{ route('fashotel.store') }}" method="POST" enctype="multipart/form-data">
     @csrf
   
      <div class="row">
@@ -60,14 +60,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <textarea class="form-control" style="height:150px" name="keterangan" placeholder="keterangan"></textarea>
             </div>
         </div>
+        <form>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+        <label for="exampleFormControlFile1">Gambar</label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="gambar">
+        </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Simpan</button>
         </div>
     </div>
+        </form>
    
 </form>
   <!-- /.content-wrapper -->
+  </div>
   <!-- Control Sidebar -->
+  </div>
   <!-- <aside class="control-sidebar control-sidebar-dark">
     Control sidebar content goes here
     <div class="p-3">
@@ -93,6 +102,4 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
   
-@section('content')
-
-@endsection
+ 

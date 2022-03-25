@@ -26,6 +26,7 @@
       </div> -->
 
       <!-- Sidebar Menu -->
+      @if(Auth::user()->roles[0]['name'] == 'admin')
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
@@ -67,6 +68,23 @@
         </ul>
         
       </nav>
+      @elseif(Auth::user()->roles[0]['name'] == 'resepsionis')
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item menu-open">
+            
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('resepsionis.index')}}" class="nav-link">
+                  
+                  <p>Reservasi</p>
+                </a>
+              </li>
+            </ul>
+      </nav>
+      @endif
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->

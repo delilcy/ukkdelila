@@ -7,6 +7,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html lang="en">
 <head>
   @include('template.head')
+  <style>
+    .main-sidebar{
+        min-height:109% !important;
+    }
+  </style>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -32,7 +37,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div>
         </div>
     </div>
-   
+   <br>
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
             <p>{{ $message }}</p>
@@ -42,7 +47,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <table class="table table-bordered">
         <tr>
             <th>No</th>
-            <th>Nama Fasilitas Kamar</th>
             <th>Tipe Kamar</th>
             <th>Jumlah Kamar</th>
             <th width="280px">Action</th>
@@ -50,7 +54,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
         @foreach ($kamar as $i => $kam)
         <tr>
             <td>{{ ++$i }}</td>
-            <td>{{ $kam->fas_kamar }}</td>
             <td>{{ $kam->tipe_kamar }}</td>
             <td>{{ $kam->jml_kamar }}</td>
             <td>

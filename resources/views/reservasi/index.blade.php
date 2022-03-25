@@ -1,11 +1,35 @@
-@extends('reservasi.layout')
- 
-@section('content')
-    <div class="row">
+
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
+<head>
+  @include('template.head')
+  <style>
+    .main-sidebar{
+        min-height:109% !important;
+    }
+  </style>
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  @include('template.navbar')
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  @include('template.sidebar')
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper p-4">
+   
+  <!-- /.content-wrapper -->
+  <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-            <br>
-            <br>
             <br>
                 <h2>Reservasi</h2>
             </div>
@@ -27,28 +51,38 @@
 <div class="row">
 <form action="{{ route('search') }}" method="POST">
     @csrf
-    <div class="col-sm-3">
-    <input type="text"name="nm_tamu" class="form-control" placeholder="Search.." aria-label="Recipient's username" aria-describedby="button-addon2">
+    <div class="row">
+    <div class="col">
+    <input type="text"name="nm_tamu" class="form-control" style="width:200px;" placeholder="Search.." aria-label="Recipient's username" aria-describedby="button-addon2">
+
     </div>
-    <div class="col-sm-1">
+    <div class="col">
     <button class="btn btn-danger" type="submit" id="button-addon2">Search</button>
+
     </div>
-    <div class="col-sm-2">
+    <div class="col">
     <a class="btn btn-warning" href="{{ route('reservasi.index')}}">semua</a>
+
     </div>
+  </div>
   </form>
   </div>
 </div>
-<div class="col-md-2">
+
+<div class="col">
   <div class="row">
-  <form action="{{ route('reservasi.filter') }}" style="position:fixed; left:750px; top:137px;" method="POST">
+  <form action="{{ route('reservasi.filter') }}" style="position:absolute; left:800px; top:-40px;" method="POST">
     @csrf
-    <div class="col-sm-3">
-    <input class="form-control" type="date" name="tglcekin" id="button-addon2" style="height:40px">
+    <div class="row row-md-5">
+    <div class="col col-md-6">
+    <input class="form-control" type="date" name="tglcekin" id="button-addon2" style="height:40px; width:180px; margin-right:100px">
     </div>
-    <div class="col-sm-2">
-    <button class="btn btn-warning" type="submit">cari</button>
+    <div class="col col-md-5">
+    <button class="btn btn-warning" type="submit" style="margin-left:50px">cari</button>
     </div>
+   
+  </div>
+   
     </form>
   </div>
 </div>
@@ -96,7 +130,32 @@
         </tr>
         @endforeach
     </table>
-  
-    {!! $reservasi->links() !!}
-      
-@endsection
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <!-- Control Sidebar -->
+  <!-- <aside class="control-sidebar control-sidebar-dark">
+    Control sidebar content goes here
+    <div class="p-3">
+      <h5>Title</h5>
+      <p>Sidebar content</p>
+    </div>
+  </aside>
+  /.control-sidebar -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+  @include('template.footer')
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+@include('template.script')
+
+</body>
+</html>
+
+
+
+ 

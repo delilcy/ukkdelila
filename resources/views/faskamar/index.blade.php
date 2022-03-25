@@ -7,6 +7,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html lang="en">
 <head>
   @include('template.head')
+  <style>
+    .main-sidebar{
+        min-height:109% !important;
+    }
+  </style>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -32,7 +37,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div>
         </div>
     </div>
-   
+   <br>
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
             <p>{{ $message }}</p>
@@ -96,9 +101,3 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
  
-@section('content')
-   
-  
-    {!! $fasilitaskmr->links() !!}
-      
-@endsection

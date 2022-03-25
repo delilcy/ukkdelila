@@ -8,6 +8,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html lang="en">
 <head>
   @include('template.head')
+  <style>
+    .main-sidebar{
+        min-height:109% !important;
+    }
+  </style>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">

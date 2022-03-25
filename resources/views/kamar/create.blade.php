@@ -7,6 +7,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html lang="en">
 <head>
   @include('template.head')
+  <style>
+    .main-sidebar{
+        min-height:109% !important;
+    }
+  </style>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -48,12 +53,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <strong>Nama Fasilitas Kamar:</strong>
-                <input type="text" name="fas_kamar" class="form-control" placeholder="nama fasilitas kamar">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
                 <strong>Tipe Kamar:</strong>
                 <textarea class="form-control" style="height:150px" name="tipe_kamar" placeholder="tipe kamar"></textarea>
             </div>
@@ -61,7 +60,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Jumlah Kamar:</strong>
-                <input type="number "class="form-control" style="height:150px" name="jml_kamar" placeholder="jumlah kamar"></input>
+                <input type="number"class="form-control" style="height:50px" name="jml_kamar" placeholder="jumlah kamar"></input>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

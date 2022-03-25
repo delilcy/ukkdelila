@@ -63,14 +63,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <textarea class="form-control" style="height:150px" name="keterangan" placeholder="keterangan">{{ $fasilitashotel[0]->keterangan }}</textarea>
                 </div>
             </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+        <strong>Gambar</strong>
+        <input type="file" class="form-control" name="gambar" style="height:50px" value="{{ $fasilitashotel[0]->gambar }}">
+        
+        </div>
+        </form>
+       
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+            <br>
               <button type="submit" class="btn btn-primary">EDIT</button>
             </div>
         </div>
    
     </form>
   <!-- /.content-wrapper -->
+  </div>
   <!-- Control Sidebar -->
+  </div>
   <!-- <aside class="control-sidebar control-sidebar-dark">
     Control sidebar content goes here
     <div class="p-3">

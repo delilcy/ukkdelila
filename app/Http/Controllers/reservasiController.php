@@ -72,7 +72,7 @@ class reservasiController extends Controller
      */
     public function show(reservasi $reservasi)
     {
-        //
+        return view('reservasi.show',compact('reservasi'));
     }
 
     /**

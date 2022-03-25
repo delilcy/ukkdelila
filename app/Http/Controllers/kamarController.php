@@ -38,7 +38,6 @@ class kamarController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'fas_kamar' => 'required',
             'tipe_kamar' => 'required',
             'jml_kamar' => 'required',
            
@@ -82,7 +81,6 @@ class kamarController extends Controller
     public function update(Request $request, kamar $kamar)
     {
         $request->validate([
-            'fas_kamar' => 'required',
             'tipe_kamar' => 'required',
             'jml_kamar' => 'required',
         ]);
@@ -90,7 +88,6 @@ class kamarController extends Controller
         $update = DB::table('kamar')
               ->where('id_kamar', $request->id_kamar)
               ->update([
-                  'fas_kamar' => $request->fas_kamar,
                   'tipe_kamar' => $request->tipe_kamar,
                   'jml_kamar' => $request->jml_kamar,
               ]);

@@ -7,6 +7,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html lang="en">
 <head>
   @include('template.head')
+  <style>
+    .main-sidebar{
+        min-height:109% !important;
+    }
+  </style>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -25,7 +30,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2> Tampilkan Data Kamar </h2>
+                <h2> Data Kamar </h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('kamar.index') }}"> Kembali</a>
@@ -34,12 +39,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </div>
    
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Nama Fasilitas Kamar:</strong>
-                {{ $kamar->fas_kamar }}
-            </div>
-        </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>Tipe Kamar:</strong>

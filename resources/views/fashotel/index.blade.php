@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -7,6 +6,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html lang="en">
 <head>
   @include('template.head')
+  <style>
+    .main-sidebar{
+        min-height:109% !important;
+    }
+  </style>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -22,28 +26,33 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <div class="content-wrapper p-4">
    
   <!-- /.content-wrapper -->
-  <div class="row">
+    <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
                 <h2>Fasilitas Hotel</h2>
             </div>
+			
+				
             <div class="pull-right">
                 <a class="btn btn-success" href="{{ route('fashotel.create') }}"> Input Data</a>
             </div>
         </div>
     </div>
-   
+   <br>
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
             <p>{{ $message }}</p>
         </div>
     @endif
    
+   <div class="row">
+   <div class="col-xs-12 col-sm-12 col-md-12">
     <table class="table table-bordered">
         <tr>
             <th>No</th>
             <th>Nama Fasilitas Hotel</th>
             <th>Keterangan</th>
+            <th>Gambar</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($fasilitashotel as $i => $fas)
@@ -51,6 +60,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <td>{{ ++$i }}</td>
             <td>{{ $fas->nm_fashotel }}</td>
             <td>{{ $fas->keterangan }}</td>
+            <td>
+            <img src="{{ url('/fasilitashotel/') . '/' . $fas->gambar}}" alt="{{$fas->gambar}}"> </td>
             <td>
                 <form action="{{ route('fashotel.destroy', $fas->id_fashotel) }}" method="POST">
    
@@ -67,6 +78,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </tr>
         @endforeach
     </table>
+   </div>
+   </div>
   <!-- /.content-wrapper -->
   </div>
   <!-- Control Sidebar -->
@@ -93,9 +106,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </body>
 </html>
 
-
-
- 
 @section('content')
    
   
