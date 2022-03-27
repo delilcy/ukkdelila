@@ -18,16 +18,7 @@ class resepsionisController extends Controller
         return view('reservasi.index', compact('reservasi'));
     }
 
-    public function search(Request $request)
-    {
-        $reservasi=  DB::table('reservasi')->where('nm_tamu', $request->nm_tamu )->get();
-        return view('reservasi.index', compact('reservasi'));
-    }
-    public function filter(Request $request)
-    {
-        $reservasi=  DB::table('reservasi')->where('tglcekin', $request->tglcekin )->get();
-        return view('reservasi.index', compact('reservasi'));
-    }
+        
 
     /**
      * Show the form for creating a new resource.

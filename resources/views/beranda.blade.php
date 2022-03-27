@@ -10,7 +10,7 @@
       <link href="{{ asset('css/app.css') }}" rel="stylesheet">
       <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
       <script src="{{ asset('js/app.js') }}"></script>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg fixed-top  navbar-light bg-light">
           <a class="navbar-brand" href="#"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -45,18 +45,7 @@
                                     </form>
                                 </div>
                             </li>
-                  <li class="nav-item dropdown">
-
-                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="#"></a>
-                          <a class="dropdown-item" href="#"></a>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item" href="#"></a>
-                      </div>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link disabled" href="#"></a>
-                  </li>
+                  
               </ul>
     
 
@@ -217,7 +206,7 @@
                       </div>
                       <div class="col-md">
                           <div class="form-floating">
-                              <a class="btn btn-primary btn-lg" style="height:58px; padding-top:12px;" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                              <a class="btn btn-primary btn-lg" style="height:40px; padding-top:10px; left:500px; " data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                                   Pesan
                               </a>
                           </div>
@@ -362,9 +351,76 @@
                   </div>
               </div>
           </div>
+          <div class="card">
+              <div class="card-body">
+                  <p class="fs-2">Hotel Facilities</p>
+                  <p class="font-monospace">Strawberries Golden Hotel stunning and exquisite interior design incorporates both traditional and modern features. </p>
+                  </div>
+          </div>
+                  <div class="row">
+
+                      @foreach($fashotel as $i => $fashotell)
+                      <div class="col">
+                          <div class="card shadow-sm">
+                              <img class="bd-placeholder-img card-img-top" src="{{ url('/fasilitashotel2/').'/'.$fashotell->gambar }}" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#55595c" />
+                              <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
+                              
+                              <div class="card-body">
+                                  <p class="card-text">{{$fashotell->nm_fashotel}}</p>
+                                  <p class="card-text">{{$fashotell->keterangan}}</p>
+                                  <div class="d-flex justify-content-between align-items-center">
+                                      <div class="btn-group">
+                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                      </div>
+
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                @endforeach
+            </div>
+
+            </div>
+          </div>
+          <div class="card">
+              <div class="card-body">
+                  <p class="fs-2">Room Facilities</p>
+                  <p class="font-monospace">Strawberries Golden Hotel stunning and exquisite interior design incorporates both traditional and modern features. </p>
+                  </div>
+          </div>
+                  <div class="row">
+
+                      @foreach($faskmr as $i => $faskmrr)
+                      <div class="col">
+                          <div class="card shadow-sm">
+                              <img class="bd-placeholder-img card-img-top" src="{{ url('/fasilitashotel2/').'/'.$faskmrr->gambar }}" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                              <title>Placeholder</title>
+                              <rect width="100%" height="100%" fill="#55595c" />
+                              <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
+
+                              <div class="card-body">
+                                  <p class="card-text">{{$faskmrr->nm_faskmr}}</p>
+                                  <p class="card-text">{{$faskmrr->tipekamar}}</p>
+                                  <div class="d-flex justify-content-between align-items-center">
+                                      <div class="btn-group">
+                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                      </div>
+
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+              </div>
+          </div>
       </main>
 
-      <footer class="text-muted py-5">
+      <footer class="text-muted py-5 bg-danger">
           <div class="container">
               <p class="float-end mb-1">
                   <a href="#">Back to top</a>

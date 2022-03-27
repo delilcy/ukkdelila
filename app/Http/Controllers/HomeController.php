@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class HomeController extends Controller
 {
@@ -27,6 +28,11 @@ class HomeController extends Controller
     }
     public function beranda()
     {
-        return view('beranda');
+        
+        $faskmr=DB::table('fasilitaskmr')->get();
+        $fashotel=DB::table('fasilitashotel')->get();
+        // dd($faskmr, $fashotel);
+        return view('beranda', compact('faskmr', 'fashotel'));
+        
     }
 }
