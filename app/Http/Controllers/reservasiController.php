@@ -74,6 +74,19 @@ class reservasiController extends Controller
     {
         return view('reservasi.show',compact('reservasi'));
     }
+    public function pesan()
+    {
+        $pesan = DB::table('reservasi')->where('email', auth()->user()->email)->get();
+        // dd($pesan);
+        return view('reservasi.pesan',compact('pesan'));
+    }
+    public function cetak(Request $request)
+    {
+        $cetak = DB::table('reservasi')->where('id_reservasi', $request->id_reservasi)->get();
+        // dd($cetak);
+        return view('reservasi.cetak', compact('cetak'));
+
+    }
 
     /**
      * Show the form for editing the specified resource.

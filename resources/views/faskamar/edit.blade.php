@@ -68,6 +68,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <textarea class="form-control" style="height:150px" name="tipekamar" placeholder="tipe kamar">{{ $fasilitaskmr[0]->tipekamar }}</textarea>
                 </div>
             </div>
+            <form>
+                 <div class="col-xs-12 col-sm-12 col-md-12">
+                 <div class="form-group">
+                 <label for="exampleFormControlFile1">Gambar</label>
+                 <input type="file" class="form-control" name="gambar" style="height:50px" value="{{ $fasilitaskmr[0]->gambar }}">
+             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
               <button type="submit" class="btn btn-primary">EDIT</button>
             </div>

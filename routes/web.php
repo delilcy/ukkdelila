@@ -14,13 +14,18 @@ use App\http\Controllers\resepsionisController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
+Route::get('cetak', function () {
+    return view('reservasi.cetak');
+});
+// Route::get('pesanan', function () {
+//     return view('reservasi.pesan');
 // });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/cetak/{id_reservasi}', 'reservasiController@cetak')->name('cetak');
+Route::get('/pesanan', 'reservasiController@pesan')->name('pesanan');
 Route::get('/', 'HomeController@beranda')->name('beranda');
 Route::get('/dashboard',function() {
     return 'Dashboard';

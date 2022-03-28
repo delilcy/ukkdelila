@@ -26,7 +26,10 @@
                           </span></a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#">Home</a>
+                      <a class="nav-link" href="{{route('beranda')}}">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="{{route('pesanan')}}">Pesanan</a>
                   </li>
                   <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -45,6 +48,7 @@
                                     </form>
                                 </div>
                             </li>
+                            
                   
               </ul>
     
@@ -69,7 +73,7 @@
           }
 
           .margin2 {
-              margin-right: 120px;
+              margin-right: 125px;
           }
 
           .margin3 {
@@ -77,7 +81,7 @@
           }
 
           .margin4 {
-              margin-right: 75px;
+              margin-right: 78Ppx;
           }
 
           .margin5 {
@@ -87,6 +91,9 @@
           .margin6 {
               margin-right: 60px;
           }
+          .geser{
+            margin-left:300px;
+        }
 
           .bd-placeholder-img {
               font-size: 1.125rem;
@@ -132,42 +139,7 @@
              
                   </div>
               </div>
-              <!-- <div class="row g-3 align-items-center">
-  <div class="col-auto">
-    <label for="inputPassword5" class="col-form-label">Check in</label>
-  </div>
-  <div class="col-auto">
-    <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpInline">
-  </div>
-  <div class="col-auto">
-    
-  </div>
-</div>
-
-<div class="row g-3 align-items-center">
-  <div class="col-auto">
-    <label for="inputPassword5" class="col-form-label">Check Out</label>
-  </div>
-  <div class="col-auto">
-    <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpInline">
-  </div>
-  <div class="col-auto">
-    
-  </div>
-</div>
-
-<div class="row g-3 align-items-center">
-  <div class="col-auto">
-    <label for="inputPassword5" class="col-form-label">Jumlah Kamar</label>
-  </div>
-  <div class="col-auto">
-    <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpInline">
-  </div>
-  <div class="col-auto">
-    
-  </div>
-</div>
-<button type="button" class="btn btn-secondary">Secondary</button> -->
+            
               <form action="{{ route('pesan') }}" method="POST">
                   @csrf
                   @if ($message = Session::get('success'))
@@ -189,7 +161,7 @@
                       <div class="col-md">
                           <div class="form-floating">
                               <input type="date" name="tglcekin" class="form-control" id="floatingInputGrid">
-                              <label for="floatingInputGrid">Check In</label>
+                              <label for="floatingInputGrid geser">Check In</label>
                           </div>
                       </div>
                       <div class="col-md">
@@ -206,7 +178,7 @@
                       </div>
                       <div class="col-md">
                           <div class="form-floating">
-                              <a class="btn btn-primary btn-lg" style="height:40px; padding-top:10px; left:500px; " data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                              <a class="btn btn-primary btn-lg" style="height:50px; padding-top:10px; left:500px; " data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                                   Pesan
                               </a>
                           </div>
@@ -354,7 +326,7 @@
           <div class="card">
               <div class="card-body">
                   <p class="fs-2">Hotel Facilities</p>
-                  <p class="font-monospace">Strawberries Golden Hotel stunning and exquisite interior design incorporates both traditional and modern features. </p>
+                  <p class="font-monospace"> </p>
                   </div>
           </div>
                   <div class="row">
@@ -388,7 +360,7 @@
           <div class="card">
               <div class="card-body">
                   <p class="fs-2">Room Facilities</p>
-                  <p class="font-monospace">Strawberries Golden Hotel stunning and exquisite interior design incorporates both traditional and modern features. </p>
+                  <p class="font-monospace"></p>
                   </div>
           </div>
                   <div class="row">

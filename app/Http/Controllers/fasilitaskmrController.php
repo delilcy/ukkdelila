@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\fasilitaskmr;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Intervention\Image\Facades\Image;
 
 class fasilitaskmrController extends Controller
 {
@@ -40,8 +41,22 @@ class fasilitaskmrController extends Controller
         $request->validate([
             'nm_faskmr' => 'required',
             'tipekamar' => 'required',
+            'gambar' => 'required',
         ]);
-        fasilitaskmr::create($request->all());
+        $image = $request->file('gambar');
+        $nameImage = $request->file('gambar')->getClientOriginalName();
+    
+        $thumbImage = Image::make($image->getRealPath())->resize(100, 100);
+        $thumbPath = public_path() . '/fasilitaskmr/' . $nameImage;
+        $thumbImage = Image::make($thumbImage)->save($thumbPath);
+    
+        $oriPath = public_path() . '/fasilitaskmr2/' . $nameImage;
+        $oriImage = Image::make($image)->save($oriPath);
+        fasilitaskmr ::create([
+            'nm_faskmr' => $request->nm_faskmr,
+            'tipekamar' => $request->tipekamar,
+            'gambar' => $nameImage,
+        ]);
         return redirect()->route('faskamar.index')->with('success','Data berhasil di input');
     }
 
@@ -86,6 +101,7 @@ class fasilitaskmrController extends Controller
         $request->validate([
             'nm_faskmr' => 'required',
             'tipekamar' => 'required',
+            'gambar' => 'required',
         ]);
         // dd($request->id_faskmr);
         $update = DB::table('fasilitaskmr')
@@ -93,6 +109,7 @@ class fasilitaskmrController extends Controller
               ->update([
                   'nm_faskmr' => $request->nm_faskmr,
                   'tipekamar' => $request->tipekamar,
+                  'gambar' => $request->gambar,
               ]);
         return redirect()->route('faskamar.index')->with('success','Data berhasil di update');
     }
