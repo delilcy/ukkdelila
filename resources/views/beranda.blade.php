@@ -10,7 +10,7 @@
       <link href="{{ asset('css/app.css') }}" rel="stylesheet">
       <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
       <script src="{{ asset('js/app.js') }}"></script>
-      <nav class="navbar navbar-expand-lg fixed-top  navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg fixed-top  navbar-light" style="background-color: #c284a6;">
           <a class="navbar-brand" href="#"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -73,7 +73,7 @@
           }
 
           .margin2 {
-              margin-right: 125px;
+              margin-right: 123px;
           }
 
           .margin3 {
@@ -81,11 +81,11 @@
           }
 
           .margin4 {
-              margin-right: 78Ppx;
+              margin-right: 80px;
           }
 
           .margin5 {
-              margin-right: 75px;
+              margin-right: 85px;
           }
 
           .margin6 {
@@ -178,7 +178,7 @@
                       </div>
                       <div class="col-md">
                           <div class="form-floating">
-                              <a class="btn btn-primary btn-lg" style="height:50px; padding-top:10px; left:500px; " data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                              <a class="btn  btn-lg" style="height:50px; padding-top:10px; left:500px; background-color: #c284a6;"  data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                                   Pesan
                               </a>
                           </div>
@@ -244,7 +244,7 @@
                           <div class="col-md-5">
                           </div>
                       </div><br>
-                      <button type="submit" class="btn btn-lg btn-block btn-primary">Konfirmasi Pesanan</button>
+                      <button type="submit" class="btn btn-lg btn-block" style="background-color: #c284a6;">Konfirmasi Pesanan</button>
                   </div>
               </form>
           </section>
@@ -272,10 +272,7 @@
                                       Kamar mandi shower</p>
 
                                   <div class="d-flex justify-content-between align-items-center">
-                                      <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                      </div>
+                                      
 
                                   </div>
                               </div>
@@ -292,10 +289,7 @@
                                   <p class="card-text">Deluxe Room</p>
                                   <p class="card-text">Memiliki ukuran luas standar sekitar 40 meter persegi</p>
                                   <div class="d-flex justify-content-between align-items-center">
-                                      <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                      </div>
+                                      
 
                                   </div>
                               </div>
@@ -311,10 +305,7 @@
                                   <p class="card-text">Premier Room</p>
                                   <p class="card-text">Memiliki ukuran 30 m2 dan kasur ukuran queen</p>
                                   <div class="d-flex justify-content-between align-items-center">
-                                      <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                      </div>
+                                     
 
                                   </div>
                               </div>
@@ -343,10 +334,7 @@
                                   <p class="card-text">{{$fashotell->nm_fashotel}}</p>
                                   <p class="card-text">{{$fashotell->keterangan}}</p>
                                   <div class="d-flex justify-content-between align-items-center">
-                                      <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                      </div>
+                                      
 
                                   </div>
                               </div>
@@ -377,10 +365,7 @@
                                   <p class="card-text">{{$faskmrr->nm_faskmr}}</p>
                                   <p class="card-text">{{$faskmrr->tipekamar}}</p>
                                   <div class="d-flex justify-content-between align-items-center">
-                                      <div class="btn-group">
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                      </div>
+                                      
 
                                   </div>
                                 </div>
@@ -392,7 +377,7 @@
           </div>
       </main>
 
-      <footer class="text-muted py-5 bg-danger">
+      <footer class="text-muted py-5" style="background-color: #c284a6;">
           <div class="container">
               <p class="float-end mb-1">
                   <a href="#">Back to top</a>
