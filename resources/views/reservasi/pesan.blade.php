@@ -184,9 +184,14 @@
         <br>
     </main>
 
-    <footer class="main-footer">
-        @include('template.footer')
-    </footer>
+    <footer class="text-muted py-5" style="background-color: #fa9e96;">
+          <div class="container" style="background-color: #fa9e96;">
+              <p class="float-end mb-1">
+                  <a href="#">Back to top</a>
+              </p>
+              <p class="mb-1">Copyright © 2022 DELILA S R. All rights reserved.</p>
+          </div>
+      </footer>
 
 
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>

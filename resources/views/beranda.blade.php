@@ -382,7 +382,7 @@
       </main>
 
       <footer class="text-muted py-5" style="background-color: #fa9e96;">
-          <div class="container">
+          <div class="container" style="background-color: #fa9e96;">
               <p class="float-end mb-1">
                   <a href="#">Back to top</a>
               </p>
