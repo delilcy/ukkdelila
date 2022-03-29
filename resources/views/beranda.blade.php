@@ -10,7 +10,7 @@
       <link href="{{ asset('css/app.css') }}" rel="stylesheet">
       <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
       <script src="{{ asset('js/app.js') }}"></script>
-      <nav class="navbar navbar-expand-lg fixed-top  navbar-light" style="background-color: #c284a6;">
+      <nav class="navbar navbar-expand-lg fixed-top  navbar-light" style="background-color: #FFA07A;">
           <a class="navbar-brand" href="#"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -19,44 +19,43 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
-                      <a class="nav-link" href="#">
-                          <img src="{{ asset('img/tro.jpg') }}" width="30" height="30" class="d-inline-block align-top" alt="">
-                          Strawberries Golden Hotel<span class="sr-only-bold">
+                      <a class="nav-link fs-5" href="#">
+                          <img src="{{ asset('img/strawberries-removebg-preview (1).png') }}" width="40" height="40" class="d-inline-block align-top" alt="">
+                          Strawberries Hotel<span class="sr-only-bold">
 
                           </span></a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="{{route('beranda')}}">Home</a>
+                      <a class="nav-link fs-5" href="{{route('beranda')}}">Home</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="{{route('pesanan')}}">Pesanan</a>
+                      <a class="nav-link fs-5" href="{{route('pesanan')}}">Pesanan</a>
                   </li>
                   <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
+                      <a id="navbarDropdown" class="nav-link fs-5 dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                          {{ Auth::user()->name }}
+                      </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+                              {{ __('Logout') }}
+                          </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                            
-                  
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                              @csrf
+                          </form>
+                      </div>
+                  </li>
+
+
               </ul>
-    
+
 
           </div>
       </nav>
-      <title>Strawberries Golden Hotel</title>
-      
+      <title>Strawberries Hotel</title>
+
 
 
 
@@ -91,9 +90,10 @@
           .margin6 {
               margin-right: 60px;
           }
-          .geser{
-            margin-left:300px;
-        }
+
+          .geser {
+              margin-left: 300px;
+          }
 
           .bd-placeholder-img {
               font-size: 1.125rem;
@@ -121,7 +121,7 @@
               <a href="#" class="navbar-brand d-flex align-items-center">
 
               </a>
-              
+
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
               </button>
@@ -134,12 +134,12 @@
           <section class="py-5 text-center container">
               <div class="row py-lg-5">
                   <div class="col-lg-6 col-md-8 mx-auto">
-                      <h1 class="fw-bold">Welcome to Strawberries Golden Hotel</h1>
+                      <h1 class="fw-bold">Welcome to Strawberries Hotel</h1>
                       <p class="font-monospace">Curating the world's best luxury hotel experience for you </p>
-             
+
                   </div>
               </div>
-            
+
               <form action="{{ route('pesan') }}" method="POST">
                   @csrf
                   @if ($message = Session::get('success'))
@@ -157,7 +157,7 @@
                       </ul>
                   </div>
                   @endif
-                  <div class="row g-2">
+                  <div class="row g-2 geser">
                       <div class="col-md">
                           <div class="form-floating">
                               <input type="date" name="tglcekin" class="form-control" id="floatingInputGrid">
@@ -178,7 +178,7 @@
                       </div>
                       <div class="col-md">
                           <div class="form-floating">
-                              <a class="btn  btn-lg" style="height:50px; padding-top:10px; left:500px; background-color: #c284a6;"  data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                              <a class="btn  btn-lg" style="height:50px; padding-top:10px; left:500px; background-color: #FFA07A;" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                                   Pesan
                               </a>
                           </div>
@@ -186,74 +186,78 @@
 
                   </div>
                   <br>
-                  <div class="collapse" id="collapseExample">
-                      <div class="row g-3 align-items-center">
-                          <div class="col-3">
-                              <label for="inputPassword6" class="form-label margin1">Nama Pemesan</label>
-                          </div>
-                          <div class="col-md-5">
-                              <input type="text" name="nm_pemesan" class="form-control" aria-describedby="passwordHelpInline">
-                          </div>
-                          <div class="col-md-5">
-                          </div>
-                      </div>
-                      <br>
-                      <div class="row g-3 align-items-center">
-                          <div class="col-3">
-                              <label for="inputPassword6" class="form-label margin2">Email</label>
-                          </div>
-                          <div class="col-md-5">
-                              <input type="text" name="email" class="form-control" aria-describedby="passwordHelpInline">
-                          </div>
-                      </div>
-                      <br>
-                      <div class="row g-3 align-items-center">
-                          <div class="col-3">
-                              <label for="inputPassword6" class="form-label margin3">No Telepon</label>
-                          </div>
-                          <div class="col-md-5">
-                              <input type="text" name="notlp" class="form-control" aria-describedby="passwordHelpInline">
-                          </div>
-                      </div>
-                      <br>
-                      <div class="row g-3 align-items-center">
-                          <div class="col-3">
-                              <label for="inputPassword6" class="form-label margin4">Nama Tamu</label>
-                          </div>
-                          <div class="col-md-5">
-                              <input type="text" name="nm_tamu" class="form-control" aria-describedby="passwordHelpInline">
-                          </div>
-                          <div class="col-md-5">
-                          </div>
-                      </div>
+                  <div class="collapse geser" id="collapseExample">
+                      <div class="card text-center" style="width: 800px;">
+                          <div class="card-body">
+                              <div class="row g-3 align-items-center">
+                                  <div class="col-3">
+                                      <label for="inputPassword6" class="form-label margin1">Nama Pemesan</label>
+                                  </div>
+                                  <div class="col-md-5">
+                                      <input type="text" name="nm_pemesan" class="form-control" aria-describedby="passwordHelpInline">
+                                  </div>
+                                  <div class="col-md-5">
+                                  </div>
+                              </div>
+                              <br>
+                              <div class="row g-3 align-items-center">
+                                  <div class="col-3">
+                                      <label for="inputPassword6" class="form-label margin2">Email</label>
+                                  </div>
+                                  <div class="col-md-5">
+                                      <input type="text" name="email" class="form-control" aria-describedby="passwordHelpInline">
+                                  </div>
+                              </div>
+                              <br>
+                              <div class="row g-3 align-items-center">
+                                  <div class="col-3">
+                                      <label for="inputPassword6" class="form-label margin3">No Telepon</label>
+                                  </div>
+                                  <div class="col-md-5">
+                                      <input type="text" name="notlp" class="form-control" aria-describedby="passwordHelpInline">
+                                  </div>
+                              </div>
+                              <br>
+                              <div class="row g-3 align-items-center">
+                                  <div class="col-3">
+                                      <label for="inputPassword6" class="form-label margin4">Nama Tamu</label>
+                                  </div>
+                                  <div class="col-md-5">
+                                      <input type="text" name="nm_tamu" class="form-control" aria-describedby="passwordHelpInline">
+                                  </div>
+                                  <div class="col-md-5">
+                                  </div>
+                              </div>
 
-                      <br>
-                      <div class="row g-3 align-items-center">
-                          <div class="col-3">
-                              <label for="inputPassword6" class="form-label margin5">Tipe Kamar</label>
-                          </div>
-                          <div class="col-md-5">
+                              <br>
+                              <div class="row g-3 align-items-center">
+                                  <div class="col-3">
+                                      <label for="inputPassword6" class="form-label margin5">Tipe Kamar</label>
+                                  </div>
+                                  <div class="col-md-5">
 
-                              <select name="tipe_kmr" class="form-select form-select-sm" aria-label=".form-select-sm example">
-                                  <option selected class="form-select" aria-label="Disabled select example" disabled>- Pilih Salah Satu -</option>
-                                  <option value="Superior">Superior Room</option>
-                                  <option value="Deluxe">Deluxe Room</option>
-                                  <option value="Premier">Premier Room</option>
-                              </select>
+                                      <select name="tipe_kmr" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                          <option selected class="form-select" aria-label="Disabled select example" disabled>- Pilih Salah Satu -</option>
+                                          <option value="Superior">Superior Room</option>
+                                          <option value="Deluxe">Deluxe Room</option>
+                                          <option value="Premier">Premier Room</option>
+                                      </select>
+                                  </div>
+                                  <div class="col-md-5">
+                                  </div>
+                              </div><br>
+                              <button type="submit" class="btn btn-lg btn-block" style="background-color: #FFA07A;">Konfirmasi Pesanan</button>
                           </div>
-                          <div class="col-md-5">
-                          </div>
-                      </div><br>
-                      <button type="submit" class="btn btn-lg btn-block" style="background-color: #c284a6;">Konfirmasi Pesanan</button>
+                      </div>
                   </div>
               </form>
           </section>
 
 
           <div class="card">
-              <div class="card-body">
+              <div class="card-body" style="background-color: #FFA07A;">
                   <p class="fs-2">Rooms & Suites</p>
-                  <p class="font-monospace">Strawberries Golden Hotel stunning and exquisite interior design incorporates both traditional and modern features. </p>
+                  <p class="font-monospace">Strawberries Hotel stunning and exquisite interior design incorporates both traditional and modern features. </p>
 
               </div>
           </div>
@@ -265,14 +269,14 @@
                           <div class="card shadow-sm">
                               <img class="bd-placeholder-img card-img-top" src="{{ asset('img/suite.jpg') }}" width="100%" height="225" role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
                               <title>Placeholder</title>
-                              <rect width="100%" height="100%" fill="#55595c"  /><text x="50%" y="50%" fill="#eceeef" dy=".10em"></text></img>
+                              <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".10em"></text></img>
                               <div class="card-body">
                                   <p class="card-text">Superior Room</p>
                                   <p class="card-text-font-monospace">Kamar berukuran luas 32 m2
                                       Kamar mandi shower</p>
 
                                   <div class="d-flex justify-content-between align-items-center">
-                                      
+
 
                                   </div>
                               </div>
@@ -289,7 +293,7 @@
                                   <p class="card-text">Deluxe Room</p>
                                   <p class="card-text">Memiliki ukuran luas standar sekitar 40 meter persegi</p>
                                   <div class="d-flex justify-content-between align-items-center">
-                                      
+
 
                                   </div>
                               </div>
@@ -305,7 +309,7 @@
                                   <p class="card-text">Premier Room</p>
                                   <p class="card-text">Memiliki ukuran 30 m2 dan kasur ukuran queen</p>
                                   <div class="d-flex justify-content-between align-items-center">
-                                     
+
 
                                   </div>
                               </div>
@@ -315,69 +319,69 @@
               </div>
           </div>
           <div class="card">
-              <div class="card-body">
+              <div class="card-body" style="background-color: #FFA07A;">
                   <p class="fs-2">Hotel Facilities</p>
                   <p class="font-monospace"> </p>
-                  </div>
+              </div>
           </div>
-                  <div class="row">
+          <div class="row">
 
-                      @foreach($fashotel as $i => $fashotell)
-                      <div class="col">
-                          <div class="card shadow-sm">
-                              <img class="bd-placeholder-img card-img-top" src="{{ url('/fasilitashotel2/').'/'.$fashotell->gambar }}" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                              <title>Placeholder</title>
-                              <rect width="100%" height="100%" fill="#55595c" />
-                              <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
-                              
-                              <div class="card-body">
-                                  <p class="card-text">{{$fashotell->nm_fashotel}}</p>
-                                  <p class="card-text">{{$fashotell->keterangan}}</p>
-                                  <div class="d-flex justify-content-between align-items-center">
-                                      
+              @foreach($fashotel as $i => $fashotell)
+              <div class="col">
+                  <div class="card shadow-sm">
+                      <img class="bd-placeholder-img card-img-top" src="{{ url('/fasilitashotel2/').'/'.$fashotell->gambar }}" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                      <title>Placeholder</title>
+                      <rect width="100%" height="100%" fill="#55595c" />
+                      <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
 
-                                  </div>
-                              </div>
+                      <div class="card-body">
+                          <p class="card-text">{{$fashotell->nm_fashotel}}</p>
+                          <p class="card-text">{{$fashotell->keterangan}}</p>
+                          <div class="d-flex justify-content-between align-items-center">
+
+
                           </div>
                       </div>
-                @endforeach
-            </div>
+                  </div>
+              </div>
+              @endforeach
+          </div>
 
-            </div>
+          </div>
           </div>
           <div class="card">
-              <div class="card-body">
+              <div class="card-body" style="background-color: #FFA07A;">
                   <p class="fs-2">Room Facilities</p>
                   <p class="font-monospace"></p>
-                  </div>
-          </div>
-                  <div class="row">
-
-                      @foreach($faskmr as $i => $faskmrr)
-                      <div class="col">
-                          <div class="card shadow-sm">
-                              <img class="bd-placeholder-img card-img-top" src="{{ url('/fasilitashotel2/').'/'.$faskmrr->gambar }}" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                              <title>Placeholder</title>
-                              <rect width="100%" height="100%" fill="#55595c" />
-                              <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
-
-                              <div class="card-body">
-                                  <p class="card-text">{{$faskmrr->nm_faskmr}}</p>
-                                  <p class="card-text">{{$faskmrr->tipekamar}}</p>
-                                  <div class="d-flex justify-content-between align-items-center">
-                                      
-
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                        @endforeach
-                    </div>
               </div>
+          </div>
+          <div class="row">
+
+              @foreach($faskmr as $i => $faskmrr)
+              <div class="col">
+                  <div class="card shadow-sm">
+                      <img class="bd-placeholder-img card-img-top" src="{{ url('/fasilitaskmr2/').'/'.$faskmrr->gambar }}" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                      <title>Placeholder</title>
+                      <rect width="100%" height="100%" fill="#55595c" />
+                      <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
+
+                      <div class="card-body">
+                          <p class="card-text">{{$faskmrr->nm_faskmr}}</p>
+                          <p class="card-text">{{$faskmrr->tipekamar}}</p>
+                          <div class="d-flex justify-content-between align-items-center">
+
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              @endforeach
+          </div>
+          </div>
           </div>
       </main>
 
-      <footer class="text-muted py-5" style="background-color: #c284a6;">
+      <footer class="text-muted py-5" style="background-color: #FFA07A;">
           <div class="container">
               <p class="float-end mb-1">
                   <a href="#">Back to top</a>
