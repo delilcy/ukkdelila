@@ -10,7 +10,7 @@
       <link href="{{ asset('css/app.css') }}" rel="stylesheet">
       <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
       <script src="{{ asset('js/app.js') }}"></script>
-      <nav class="navbar navbar-expand-lg fixed-top  navbar-light" style="background-color: #FFA07A;">
+      <nav class="navbar navbar-expand-lg fixed-top  navbar-light" style="background-color: #fa9e96;">
           <a class="navbar-brand" href="#"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -178,7 +178,7 @@
                       </div>
                       <div class="col-md">
                           <div class="form-floating">
-                              <a class="btn  btn-lg" style="height:50px; padding-top:10px; left:500px; background-color: #FFA07A;" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                              <a class="btn  btn-lg" style="height:50px; padding-top:10px; left:500px; background-color: #fa9e96;" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                                   Pesan
                               </a>
                           </div>
@@ -246,7 +246,7 @@
                                   <div class="col-md-5">
                                   </div>
                               </div><br>
-                              <button type="submit" class="btn btn-lg btn-block" style="background-color: #FFA07A;">Konfirmasi Pesanan</button>
+                              <button type="submit" class="btn btn-lg btn-block" style="background-color: #fa9e96;">Konfirmasi Pesanan</button>
                           </div>
                       </div>
                   </div>
@@ -255,7 +255,7 @@
 
 
           <div class="card">
-              <div class="card-body" style="background-color: #FFA07A;">
+              <div class="card-body" style="background-color: #fa9e96;">
                   <p class="fs-2">Rooms & Suites</p>
                   <p class="font-monospace">Strawberries Hotel stunning and exquisite interior design incorporates both traditional and modern features. </p>
 
@@ -319,7 +319,7 @@
               </div>
           </div>
           <div class="card">
-              <div class="card-body" style="background-color: #FFA07A;">
+              <div class="card-body" style="background-color: #fa9e96;">
                   <p class="fs-2">Hotel Facilities</p>
                   <p class="font-monospace"> </p>
               </div>
@@ -331,7 +331,7 @@
                   <div class="card shadow-sm">
                       <img class="bd-placeholder-img card-img-top" src="{{ url('/fasilitashotel2/').'/'.$fashotell->gambar }}" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                       <title>Placeholder</title>
-                      <rect width="100%" height="100%" fill="#55595c" />
+                      <rect width="50%" height="50%" fill="#55595c" />
                       <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
 
                       <div class="card-body">
@@ -350,7 +350,7 @@
           </div>
           </div>
           <div class="card">
-              <div class="card-body" style="background-color: #FFA07A;">
+              <div class="card-body" style="background-color: #fa9e96;">
                   <p class="fs-2">Room Facilities</p>
                   <p class="font-monospace"></p>
               </div>
@@ -360,14 +360,14 @@
               @foreach($faskmr as $i => $faskmrr)
               <div class="col">
                   <div class="card shadow-sm">
-                      <img class="bd-placeholder-img card-img-top" src="{{ url('/fasilitaskmr2/').'/'.$faskmrr->gambar }}" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                      <img class="bd-placeholder-img card-img-top" src="{{ url('/fasilitaskmr2/').'/'.$faskmrr->gambar }}" width="10%" height="10%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                       <title>Placeholder</title>
-                      <rect width="100%" height="100%" fill="#55595c" />
+                      <rect width="50%" height="50%" fill="#55595c" />
                       <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
 
                       <div class="card-body">
-                          <p class="card-text">{{$faskmrr->nm_faskmr}}</p>
                           <p class="card-text">{{$faskmrr->tipekamar}}</p>
+                          <p class="card-text">{{$faskmrr->nm_faskmr}}</p>
                           <div class="d-flex justify-content-between align-items-center">
 
 
@@ -381,7 +381,7 @@
           </div>
       </main>
 
-      <footer class="text-muted py-5" style="background-color: #FFA07A;">
+      <footer class="text-muted py-5" style="background-color: #fa9e96;">
           <div class="container">
               <p class="float-end mb-1">
                   <a href="#">Back to top</a>

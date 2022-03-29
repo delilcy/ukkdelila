@@ -10,7 +10,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
-    <nav class="navbar navbar-expand-lg fixed-top  navbar-light" style="background-color: #c284a6;">
+    <nav class="navbar navbar-expand-lg fixed-top  navbar-light" style="background-color: #fa9e96;">
         <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -20,8 +20,8 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">
-                        <img src="{{ asset('img/tro.jpg') }}" width="30" height="30" class="d-inline-block align-top" alt="">
-                        Strawberries Golden Hotel<span class="sr-only-bold">
+                        <img src="{{ asset('img/strawberries-removebg-preview (1).png') }}" width="30" height="30" class="d-inline-block align-top" alt="">
+                        Strawberries Hotel<span class="sr-only-bold">
 
                         </span></a>
                 </li>

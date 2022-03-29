@@ -16,7 +16,7 @@ class PesanController extends Controller
     {
         $request->validate([
             'tglcekin' => 'required|date|after_or_equal:today',
-            'tglcekout' => 'required|date|after:tgl_checkin',
+            'tglcekout' => 'required|date|after:tgl_cekin',
             'jml_kmr' => 'required',
             'nm_pemesan' => 'required',
             'nm_tamu' => 'required',

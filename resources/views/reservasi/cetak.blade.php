@@ -25,8 +25,8 @@
 <body>
     <div class="container p-5">
         <div class="card text-center" style="max-width: 70rem; ">
-            <div class="card-header" style="background-color: #c284a6;">
-                <h2 style="background-color: #c284a6;">Bukti Reservasi</h2>
+            <div class="card-header" style="background-color: #ff5457;">
+                <h2 style="background-color: #ff5457;">Bukti Reservasi</h2>
             </div>
             <div class="card-body">
                 <div class="mb-3 row">
@@ -86,7 +86,7 @@
 
 
             </div>
-            <div class="card-footer text-muted" style="background-color: #c284a6;">
+            <div class="card-footer text-muted" style="background-color: #ff5457;">
 
             </div>
         </div>
