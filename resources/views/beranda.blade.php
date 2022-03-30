@@ -318,17 +318,18 @@
                   </div>
               </div>
           </div>
+          <div class="container">
           <div class="card">
-              <div class="card-body" style="background-color: #fa9e96;">
+              <div class="car d-body" style="background-color: #fa9e96;">
                   <p class="fs-2">Hotel Facilities</p>
                   <p class="font-monospace"> </p>
               </div>
           </div>
-          <div class="row">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
               @foreach($fashotel as $i => $fashotell)
               <div class="col">
-                  <div class="card shadow-sm">
+                  <div class="card shadow-sm" style="margin-top:50px; margin-bottom:50px;">
                       <img class="bd-placeholder-img card-img-top" src="{{ url('/fasilitashotel2/').'/'.$fashotell->gambar }}" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                       <title>Placeholder</title>
                       <rect width="50%" height="50%" fill="#55595c" />
@@ -346,21 +347,52 @@
               </div>
               @endforeach
           </div>
+          </div>
+          
+          <div class="container">
+          <div class="card">
+              <div class="car d-body" style="background-color: #fa9e96;">
+                  <p class="fs-2">Hotel Facilities</p>
+                  <p class="font-monospace"> </p>
+              </div>
+          </div>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                <img src="{{ asset('img/premier.jpg') }}" class="img-fluid rounded-circle" style alt="{{ asset('img/premier.jpg') }}">
+                <p class="display-6 text-center">Nama Fasilitas</p>
+                </div>
+                <div class="col">
+                <img src="{{ asset('img/premier.jpg') }}" class="img-fluid rounded-circle" style alt="{{ asset('img/premier.jpg') }}">
+                <p class="display-6 text-center">Nama Fasilitas</p>
+                </div>
+                <div class="col">
+                <img src="{{ asset('img/premier.jpg') }}" class="img-fluid rounded-circle" style alt="{{ asset('img/premier.jpg') }}">
+                <p class="display-6 text-center">Nama Fasilitas</p>
+                </div>
+                <div class="col">
+                <img src="{{ asset('img/premier.jpg') }}" class="img-fluid rounded-circle" style alt="{{ asset('img/premier.jpg') }}">
+                <p class="display-6 text-center">Nama Fasilitas</p>
+                </div>
+          </div>
+          </div>
 
           </div>
           </div>
+          <div class="container">
           <div class="card">
               <div class="card-body" style="background-color: #fa9e96;">
                   <p class="fs-2">Room Facilities</p>
                   <p class="font-monospace"></p>
               </div>
           </div>
-          <div class="row">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
               @foreach($faskmr as $i => $faskmrr)
+              <br>
+              <br>
               <div class="col">
-                  <div class="card shadow-sm">
-                      <img class="bd-placeholder-img card-img-top" src="{{ url('/fasilitaskmr2/').'/'.$faskmrr->gambar }}" width="10%" height="10%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                  <div class="card shadow-sm" style="margin-top:50px; margin-bottom:50px;">
+                      <img class="bd-placeholder-img card-img-top" src="{{ url('/fasilitaskmr2/').'/'.$faskmrr->gambar }}" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                       <title>Placeholder</title>
                       <rect width="50%" height="50%" fill="#55595c" />
                       <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
@@ -375,7 +407,10 @@
                       </div>
                   </div>
               </div>
+              <br>
+              <br>
               @endforeach
+          </div>
           </div>
           </div>
           </div>
