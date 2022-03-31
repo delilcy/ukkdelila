@@ -18,6 +18,10 @@
             margin-left: 180px;
         }
 
+        html {
+            -webkit-print-color-adjust: exact; 
+        }
+
     </style>
 
     <title>Bukti Reservasi</title>

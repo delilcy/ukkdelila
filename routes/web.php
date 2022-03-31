@@ -31,12 +31,10 @@ Route::get('/dashboard',function() {
     return 'Dashboard';
 })->name('dashboard');
 
-Route::resource('kamar','kamarController');
-Route::resource('faskamar','fasilitaskmrController');
-Route::resource('fashotel','fasilitashotelController');
-Route::resource('admin','adminController');
-Route::resource('resepsionis','resepsionisController');
-Route::resource('tamu','tamuController');
+Route::middleware('role:admin')->resource('kamar','kamarController');
+Route::middleware('role:admin')->resource('faskamar','fasilitaskmrController');
+Route::middleware('role:admin')->resource('fashotel','fasilitashotelController');
+Route::middleware('role:resepsionis')->resource('resepsionis','resepsionisController');
 Route::resource('reservasi','reservasiController');
 Route::post('/resepsionis/search', 'reservasiController@search')->name('search');
 Route::post('/resepsionis/filter', 'reservasiController@filter')->name('reservasi.filter');

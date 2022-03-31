@@ -50,9 +50,11 @@ class fasilitashotelController extends Controller
         $thumbImage = Image::make($image->getRealPath())->resize(100, 100);
         $thumbPath = public_path() . '/fasilitashotel/' . $nameImage;
         $thumbImage = Image::make($thumbImage)->save($thumbPath);
-    
+        
+        $ubahImage = Image::make($image->getRealPath())->resize(3000, 2000);
         $oriPath = public_path() . '/fasilitashotel2/' . $nameImage;
-        $oriImage = Image::make($image)->save($oriPath);
+        $oriImage = Image::make($ubahImage)->save($oriPath);
+
         fasilitashotel::create([
             'nm_fashotel' => $request->nm_fashotel,
             'keterangan' => $request->keterangan,
@@ -102,15 +104,38 @@ class fasilitashotelController extends Controller
         $request->validate([
             'nm_fashotel' => 'required',
             'keterangan' => 'required',
-            'gambar' => 'required',
+            
         ]);
         // dd($request->id_fashotel);
+        if ($request->gambar != null ) {
+            $image = $request->file('gambar');
+            $nameImage = $request->file('gambar')->getClientOriginalName();
+        
+            $thumbImage = Image::make($image->getRealPath())->resize(100, 100);
+            $thumbPath = public_path() . '/fasilitashotel/' . $nameImage;
+            $thumbImage = Image::make($thumbImage)->save($thumbPath);
+            
+            $ubahImage = Image::make($image->getRealPath())->resize(3000, 2000);
+            $oriPath = public_path() . '/fasilitashotel2/' . $nameImage;
+            $oriImage = Image::make($ubahImage)->save($oriPath);
+
+            $update = DB::table('fasilitashotel')
+            ->where('id_fashotel', $request->id_fashotel)
+            ->update([
+                'nm_fashotel' => $request->nm_fashotel,
+                'keterangan' => $request->keterangan,
+                'gambar' => $nameImage,
+            ]);
+
+            return redirect()->route('fashotel.index')->with('success','Data berhasil di update');
+        }
+
         $update = DB::table('fasilitashotel')
               ->where('id_fashotel', $request->id_fashotel)
               ->update([
                   'nm_fashotel' => $request->nm_fashotel,
                   'keterangan' => $request->keterangan,
-                  'gambar' => $request->gambar,
+                  
               ]);
         return redirect()->route('fashotel.index')->with('success','Data berhasil di update');
     }

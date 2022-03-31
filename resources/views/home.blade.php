@@ -6,6 +6,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html lang="en">
 <head>
     @include('template.head')
+    <style>
+        .main-sidebar {
+            min-height: 109% !important;
+        }
+
+    </style>
 </head>
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
@@ -18,70 +24,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
         @include('template.sidebar')
 
         <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
-            <!-- Content Header (Page header) -->
-            <div class="content-header">
-                <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <h1 class="m-0">Strawberries Hotel</h1>
-                        </div><!-- /.col -->
-                        <div class="col-sm-6">
-                            <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <div class="content-wrapper p-4">
 
-                            </ol>
-                        </div><!-- /.col -->
-                    </div><!-- /.row -->
-                </div><!-- /.container-fluid -->
-            </div>
-            <!-- /.content-header -->
-
-            <!-- Main content -->
-            <div class="content">
-                <div class="container-fluid">
-                    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="{{ asset('img/d.jpg') }}" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{{ asset('img/p.jpg') }}" class="d-block w-100" alt="...">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{{ asset('img/j.jpg') }}" class="d-block w-100" alt="...">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-target="#carouselExampleFade" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-target="#carouselExampleFade" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </button>
-                    </div>
-                    <!-- /.col-md-6 -->
-                </div>
-                <!-- /.row -->
-            </div><!-- /.container-fluid -->
+            <!-- /.content-wrapper -->
+            <h1 class="display-4">Selamat Datang, {{ Auth::user()->name }}</h1>
+            <p class="lead">
+                Halaman ini tersedia untuk mengelola @if(Auth::user()->roles[0]['name'] == 'admin') Kamar, Fasilitas Kamar, dan Fasilitas Hotel @elseif(Auth::user()->roles[0]['name'] == 'resepsionis') Reservasi atau Data Pemesanan Kamar @endif
+            </p>
         </div>
-        <!-- /.content -->
     </div>
-    <!-- /.content-wrapper -->
-
-    <!-- Control Sidebar -->
-    <aside class="control-sidebar control-sidebar-dark">
-        <!-- Control sidebar content goes here -->
-        <div class="p-3">
-            <h5>Title</h5>
-            <p>Sidebar content</p>
-        </div>
-    </aside>
-    <!-- /.control-sidebar -->
+    <!-- <aside class="control-sidebar control-sidebar-dark">
+    Control sidebar content goes here
+    <div class="p-3">
+      <h5>Title</h5>
+      <p>Sidebar content</p>
+    </div>
+  </aside>
+  /.control-sidebar -->
 
     <!-- Main Footer -->
-    <footer class="main-footer" style="background-color: #f5a9ae;">
+    <footer class="main-footer">
         @include('template.footer')
     </footer>
     </div>
@@ -92,3 +54,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 </body>
 </html>
+
+@section('content')
+
+
+@endsection

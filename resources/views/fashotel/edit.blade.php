@@ -43,7 +43,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div>
             @endif
 
-            <form action="{{ route('fashotel.update', $fasilitashotel[0]->id_fashotel) }}" method="POST">
+            <form action="{{ route('fashotel.update', $fasilitashotel[0]->id_fashotel) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
 

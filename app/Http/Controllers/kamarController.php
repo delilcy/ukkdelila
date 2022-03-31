@@ -42,7 +42,30 @@ class kamarController extends Controller
             'jml_kamar' => 'required',
            
         ]);
-        kamar::create($request->all());
+
+        $tipekamar = $request->tipe_kamar;
+
+        if ($tipekamar == 'Superior') {
+
+            $id = 2;
+            $jumlahawal = DB::table('kamar')->where('tipe_kamar', 'Superior')->value('jml_kamar');
+            $jumlahakhir = $jumlahawal + $request->jml_kamar;
+
+        } else {
+            
+            $id = 1;
+            $jumlahawal = DB::table('kamar')->where('tipe_kamar', 'Deluxe')->value('jml_kamar');
+            $jumlahakhir = $jumlahawal + $request->jml_kamar;
+            
+        }
+        
+
+        $update = DB::table('kamar')
+        ->where('id_kamar', $id)
+        ->update([
+            'tipe_kamar' => $request['tipe_kamar'],
+            'jml_kamar' => $jumlahakhir,
+        ]);
         return redirect()->route('kamar.index')->with('success','Data berhasil di input');
     }
 

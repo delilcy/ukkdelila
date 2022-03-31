@@ -68,31 +68,31 @@
 
       <style>
           .margin1 {
-              margin-right: 50px;
+              margin-right: 0px;
           }
 
           .margin2 {
-              margin-right: 123px;
+              margin-left: -70px;
           }
 
           .margin3 {
-              margin-right: 84px;
+              margin-left: -26px;
           }
 
           .margin4 {
-              margin-right: 80px;
+              margin-left: -27px;
           }
 
           .margin5 {
-              margin-right: 85px;
+              margin-left: -30px;
           }
 
           .margin6 {
-              margin-right: 60px;
+              margin-right: 0px;
           }
 
           .geser {
-              margin-left: 300px;
+              margin-left: 150px;
           }
 
           .bd-placeholder-img {
@@ -107,6 +107,16 @@
               .bd-placeholder-img-lg {
                   font-size: 6.5rem;
               }
+          }
+
+          .circular--square {
+              border-radius:50% 50%;
+              margin-left:50px;
+          }
+          .circular--square img {
+              width: 130px;
+              height:130px;
+              border-radius: 50% 50%;
           }
 
       </style>
@@ -187,9 +197,9 @@
                   </div>
                   <br>
                   <div class="collapse geser" id="collapseExample">
-                      <div class="card text-center" style="width: 800px;">
+                      <div class="card text-center" style="width: 720px;">
                           <div class="card-body">
-                              <div class="row g-3 align-items-center">
+                              <div class="row g-2 align-items-center" style="margin-left:150px;">
                                   <div class="col-3">
                                       <label for="inputPassword6" class="form-label margin1">Nama Pemesan</label>
                                   </div>
@@ -200,7 +210,7 @@
                                   </div>
                               </div>
                               <br>
-                              <div class="row g-3 align-items-center">
+                              <div class="row g-2 align-items-center" style="margin-left:150px;">
                                   <div class="col-3">
                                       <label for="inputPassword6" class="form-label margin2">Email</label>
                                   </div>
@@ -209,7 +219,7 @@
                                   </div>
                               </div>
                               <br>
-                              <div class="row g-3 align-items-center">
+                              <div class="row g-2 align-items-center" style="margin-left:150px;">
                                   <div class="col-3">
                                       <label for="inputPassword6" class="form-label margin3">No Telepon</label>
                                   </div>
@@ -218,7 +228,7 @@
                                   </div>
                               </div>
                               <br>
-                              <div class="row g-3 align-items-center">
+                              <div class="row g-2 align-items-center" style="margin-left:150px;">
                                   <div class="col-3">
                                       <label for="inputPassword6" class="form-label margin4">Nama Tamu</label>
                                   </div>
@@ -230,7 +240,7 @@
                               </div>
 
                               <br>
-                              <div class="row g-3 align-items-center">
+                              <div class="row g-2 align-items-center" style="margin-left:150px;">
                                   <div class="col-3">
                                       <label for="inputPassword6" class="form-label margin5">Tipe Kamar</label>
                                   </div>
@@ -246,7 +256,7 @@
                                   <div class="col-md-5">
                                   </div>
                               </div><br>
-                              <button type="submit" class="btn btn-lg btn-block" style="background-color: #fa9e96;">Konfirmasi Pesanan</button>
+                              <button type="submit" class="btn btn-lg" style="background-color: #fa9e96;">Konfirmasi Pesanan</button>
                           </div>
                       </div>
                   </div>
@@ -318,99 +328,83 @@
                   </div>
               </div>
           </div>
+         
+
           <div class="container">
-          <div class="card">
-              <div class="car d-body" style="background-color: #fa9e96;">
-                  <p class="fs-2">Hotel Facilities</p>
-                  <p class="font-monospace"> </p>
-              </div>
-          </div>
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
-              @foreach($fashotel as $i => $fashotell)
-              <div class="col">
-                  <div class="card shadow-sm" style="margin-top:50px; margin-bottom:50px;">
-                      <img class="bd-placeholder-img card-img-top" src="{{ url('/fasilitashotel2/').'/'.$fashotell->gambar }}" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                      <title>Placeholder</title>
-                      <rect width="50%" height="50%" fill="#55595c" />
-                      <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
-
-                      <div class="card-body">
-                          <p class="card-text">{{$fashotell->nm_fashotel}}</p>
-                          <p class="card-text">{{$fashotell->keterangan}}</p>
-                          <div class="d-flex justify-content-between align-items-center">
-
-
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              @endforeach
-          </div>
-          </div>
-          
-          <div class="container">
-          <div class="card">
-              <div class="car d-body" style="background-color: #fa9e96;">
-                  <p class="fs-2">Hotel Facilities</p>
-                  <p class="font-monospace"> </p>
-              </div>
-          </div>
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                <div class="col">
-                <img src="{{ asset('img/premier.jpg') }}" class="img-fluid rounded-circle" style alt="{{ asset('img/premier.jpg') }}">
-                <p class="display-6 text-center">Nama Fasilitas</p>
-                </div>
-                <div class="col">
-                <img src="{{ asset('img/premier.jpg') }}" class="img-fluid rounded-circle" style alt="{{ asset('img/premier.jpg') }}">
-                <p class="display-6 text-center">Nama Fasilitas</p>
-                </div>
-                <div class="col">
-                <img src="{{ asset('img/premier.jpg') }}" class="img-fluid rounded-circle" style alt="{{ asset('img/premier.jpg') }}">
-                <p class="display-6 text-center">Nama Fasilitas</p>
-                </div>
-                <div class="col">
-                <img src="{{ asset('img/premier.jpg') }}" class="img-fluid rounded-circle" style alt="{{ asset('img/premier.jpg') }}">
-                <p class="display-6 text-center">Nama Fasilitas</p>
-                </div>
-          </div>
-          </div>
-
-          </div>
-          </div>
-          <div class="container">
-          <div class="card">
-              <div class="card-body" style="background-color: #fa9e96;">
-                  <p class="fs-2">Room Facilities</p>
-                  <p class="font-monospace"></p>
-              </div>
-          </div>
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
-              @foreach($faskmr as $i => $faskmrr)
-              <br>
-              <br>
-              <div class="col">
-                  <div class="card shadow-sm" style="margin-top:50px; margin-bottom:50px;">
-                      <img class="bd-placeholder-img card-img-top" src="{{ url('/fasilitaskmr2/').'/'.$faskmrr->gambar }}" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
-                      <title>Placeholder</title>
-                      <rect width="50%" height="50%" fill="#55595c" />
-                      <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
-
-                      <div class="card-body">
-                          <p class="card-text">{{$faskmrr->tipekamar}}</p>
-                          <p class="card-text">{{$faskmrr->nm_faskmr}}</p>
-                          <div class="d-flex justify-content-between align-items-center">
-
-
-                          </div>
-                      </div>
+              <div class="card">
+                  <div class="card-body" style="background-color: #fa9e96;">
+                      <p class="fs-2">Hotel Facilities</p>
+                      <p class="font-monospace"> </p>
                   </div>
               </div>
               <br>
-              <br>
-              @endforeach
+              <p class="fs-6 text-center">Enjoy Our Facilities</p>
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" style="margin-top:10px; margin-left:100px;">
+                  @foreach($fashotel as $i => $fashotell)
+                  <div class="col">
+                      <div class="circular--square">
+                          <img src="{{ url('/fasilitashotel/').'/'.$fashotell->gambar }}" alt="{{ url('/fasilitashotel/').'/'.$fashotell->gambar }}">
+                      </div>
+                      <br>
+                      <p style="font-size:20px; margin-left:95px;">{{$fashotell->nm_fashotel}}</p>
+                  </div>
+                  @endforeach
+                  {{-- <div class="col">
+                      <div class="circular--landscape"> <img src="images/woman-portrait.png" />
+                          <img src="{{ asset('img/premier.jpg') }}" alt="{{ asset('img/premier.jpg') }}">
+              </div>
+              <p style="font-size:20px; margin-left:40px;">Nama Fasilitas</p>
           </div>
+          <div class="col">
+              <div class="circular--landscape"> <img src="images/woman-portrait.png" />
+                  <img src="{{ asset('img/premier.jpg') }}" alt="{{ asset('img/premier.jpg') }}">
+              </div>
+              <p style="font-size:20px; margin-left:40px;">Nama Fasilitas</p>
+          </div>
+          <div class="col">
+              <div class="circular--landscape"> <img src="images/woman-portrait.png" />
+                  <img src="{{ asset('img/premier.jpg') }}" alt="{{ asset('img/premier.jpg') }}">
+              </div>
+              <p style="font-size:20px; margin-left:40px;">Nama Fasilitas</p>
+          </div> --}}
+          </div>
+          </div>
+
+          </div>
+          </div>
+          <div class="container">
+              <div class="card" style="margin-top:25px;">
+                  <div class="card-body" style="background-color: #fa9e96;">
+                      <p class="fs-2">Room Facilities</p>
+                      <p class="font-monospace"></p>
+                  </div>
+              </div>
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+                  @foreach($faskmr as $i => $faskmrr)
+                  <br>
+                  <br>
+                  <div class="col">
+                      <div class="card shadow-sm" style="margin-top:50px; margin-bottom:50px;">
+                          <img class="bd-placeholder-img card-img-top" src="{{ url('/fasilitaskmr2/').'/'.$faskmrr->gambar }}" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                          <title>Placeholder</title>
+                          <rect width="50%" height="50%" fill="#55595c" />
+                          <text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
+
+                          <div class="card-body">
+                              <p class="card-text">{{$faskmrr->tipekamar}}</p>
+                              <p class="card-text">{{$faskmrr->nm_faskmr}}</p>
+                              <div class="d-flex justify-content-between align-items-center">
+
+
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <br>
+                  <br>
+                  @endforeach
+              </div>
           </div>
           </div>
           </div>

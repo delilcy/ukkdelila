@@ -54,7 +54,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <strong>Tipe Kamar:</strong>
-                            <textarea class="form-control" style="height:150px" name="tipe_kamar" placeholder="tipe kamar"></textarea>
+                            <select name="tipe_kamar" id="tipe_kamar" class="form-control">
+                                <option value="Deluxe">Deluxe</option>
+                                <option value="Superior">Superior</option>
+                            </select>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12">
