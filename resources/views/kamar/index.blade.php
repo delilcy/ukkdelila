@@ -11,6 +11,43 @@ scratch. This page gets rid of all links and provides the needed markup only.
             min-height: 109% !important;
         }
 
+        /* CSS */
+        .button-24 {
+            background: #d68d96;
+            border: 1px solid #d68d96;
+            border-radius: 6px;
+            box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+            font-size: 16px;
+            font-weight: 800;
+            line-height: 16px;
+            min-height: 40px;
+            outline: 0;
+            padding: 12px 14px;
+            text-align: center;
+            text-rendering: geometricprecision;
+            text-transform: none;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: middle;
+        }
+
+        .button-24:hover,
+        .button-24:active {
+            background-color: initial;
+            background-position: 0 0;
+            color: #FF4742;
+        }
+
+        .button-24:active {
+            opacity: .5;
+        }
+
     </style>
 </head>
 <body class="hold-transition sidebar-mini">
@@ -30,10 +67,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="row">
                 <div class="col-lg-12 margin-tb">
                     <div class="pull-left">
-                        <h2>Kamar</h2>
+                        <h1>Kamar</h1>
                     </div>
                     <div class="pull-right">
-                        <a class="btn btn-success" href="{{ route('kamar.create') }}"> Input Data</a>
+                    <button class="button-24" role="button" href="{{ route('kamar.create') }}">Input Data</button>
+                        
                     </div>
                 </div>
             </div>
