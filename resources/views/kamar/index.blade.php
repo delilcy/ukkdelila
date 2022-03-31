@@ -22,12 +22,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
             cursor: pointer;
             display: inline-block;
             font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
-            font-size: 16px;
-            font-weight: 800;
-            line-height: 16px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 14px;
             min-height: 40px;
             outline: 0;
-            padding: 12px 14px;
+            padding: 12px 15px;
             text-align: center;
             text-rendering: geometricprecision;
             text-transform: none;
