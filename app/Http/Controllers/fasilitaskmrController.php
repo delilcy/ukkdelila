@@ -16,7 +16,7 @@ class fasilitaskmrController extends Controller
      */
     public function index()
     {
-        $fasilitaskmr = fasilitaskmr::latest()->paginate(10);
+        $fasilitaskmr = fasilitaskmr::latest()->paginate(5);
         return view('faskamar.index',compact('fasilitaskmr'));
     }
 

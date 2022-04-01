@@ -15,18 +15,18 @@ class reservasiController extends Controller
      */
     public function index()
     {
-        $reservasi = reservasi::latest()->paginate(10);
+        $reservasi = reservasi::latest()->paginate(5);
         return view('reservasi.index',compact('reservasi'));
     }
 
     public function search(Request $request)
     {
-        $reservasi=  DB::table('reservasi')->where('nm_tamu', $request->nm_tamu )->paginate(10);
+        $reservasi=  DB::table('reservasi')->where('nm_tamu', $request->nm_tamu )->paginate(5);
         return view('reservasi.index', compact('reservasi'));
     }
     public function filter(Request $request)
     {
-        $reservasi=  DB::table('reservasi')->where('tglcekin', $request->tglcekin )->paginate(10);
+        $reservasi=  DB::table('reservasi')->where('tglcekin', $request->tglcekin )->paginate(5);
         return view('reservasi.index', compact('reservasi'));
     }
     /**

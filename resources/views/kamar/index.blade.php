@@ -70,24 +70,28 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <h1>Kamar</h1>
                     </div>
                     <div class="pull-right">
-                    <button class="button-24" role="button" href="{{ route('kamar.create') }}">Input Data</button>
-                        
+
+                        <a class="btn button-24" href="{{ route('kamar.create') }}"> Tambah jumlah kamar</a>
                     </div>
                 </div>
             </div>
             <br>
             @if ($message = Session::get('success'))
-            <div class="alert alert-success">
+            <div class="alert alert-danger alert-dismissible fade show">
                 <p>{{ $message }}</p>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             @endif
 
             <table class="table table-bordered">
+             
                 <tr>
-                    <th>No</th>
-                    <th>Tipe Kamar</th>
-                    <th>Jumlah Kamar</th>
-                    <th width="280px">Action</th>
+                    <th class="bg-danger">No</th>
+                    <th class="bg-danger">Tipe Kamar</th>
+                    <th class="bg-danger">Jumlah Kamar</th>
+                    <th class="bg-danger" width="280px">Action</th>
                 </tr>
                 @foreach ($kamar as $i => $kam)
                 <tr>
@@ -109,6 +113,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </td>
                 </tr>
                 @endforeach
+            
             </table>
 
             {!! $kamar->links() !!}

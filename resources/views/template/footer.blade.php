@@ -1,4 +1,5 @@
 <!-- To the right -->
+
 <div class="float-right d-none d-sm-inline" style="background-color:#f5a9ae">
     Strawberries Hotel
 </div>

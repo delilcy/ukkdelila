@@ -11,6 +11,42 @@ scratch. This page gets rid of all links and provides the needed markup only.
             min-height: 109% !important;
         }
 
+        .button-24 {
+            background: #d68d96;
+            border: 1px solid #d68d96;
+            border-radius: 6px;
+            box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 14px;
+            min-height: 35px;
+            outline: 0;
+            padding: 10px 15px;
+            text-align: center;
+            text-rendering: geometricprecision;
+            text-transform: none;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: middle;
+        }
+
+        .button-24:hover,
+        .button-24:active {
+            background-color: initial;
+            background-position: 0 0;
+            color: #FF4742;
+        }
+
+        .button-24:active {
+            opacity: .5;
+        }
+
     </style>
 </head>
 <body class="hold-transition sidebar-mini">
@@ -33,11 +69,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <h2> Tampilkan Fasilitas Hotel </h2>
                     </div>
                     <div class="pull-right">
-                        <a class="btn btn-primary" href="{{ route('fashotel.index') }}"> Kembali</a>
+                        <a class="btn button-24" href="{{ route('fashotel.index') }}"> Kembali</a>
                     </div>
                 </div>
             </div>
-
+            <br>
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
@@ -56,7 +92,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <strong>Gambar:</strong>
                         <br>
                         <br>
-                        <img src="{{ url('/fasilitashotel2/') . '/' . $fasilitashotel[0]->gambar}}" alt="{{$fasilitashotel[0]->gambar}}" style="width:40%; height:40%">
+                        <img src="{{ url('/fasilitashotel2/') . '/' . $fasilitashotel[0]->gambar}}" alt="{{$fasilitashotel[0]->gambar}}" style="width:150px; height:150px">
 
                     </div>
                 </div>

@@ -189,7 +189,7 @@
                       <div class="col-md">
                           <div class="form-floating">
                               <a class="btn  btn-lg" style="height:50px; padding-top:10px; left:500px; background-color: #fa9e96;" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                  Pesan
+                                  Book
                               </a>
                           </div>
                       </div>
@@ -250,13 +250,13 @@
                                           <option selected class="form-select" aria-label="Disabled select example" disabled>- Pilih Salah Satu -</option>
                                           <option value="Superior">Superior Room</option>
                                           <option value="Deluxe">Deluxe Room</option>
-                                          <option value="Premier">Premier Room</option>
+                                          <option value="Presidential Suite">Presidential Suite</option>
                                       </select>
                                   </div>
                                   <div class="col-md-5">
                                   </div>
                               </div><br>
-                              <button type="submit" class="btn btn-lg" style="background-color: #fa9e96;">Konfirmasi Pesanan</button>
+                              <button type="submit" class="btn btn-lg" style="background-color: #fa9e96;">Book Now</button>
                           </div>
                       </div>
                   </div>
@@ -282,8 +282,7 @@
                               <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".10em"></text></img>
                               <div class="card-body">
                                   <p class="card-text">Superior Room</p>
-                                  <p class="card-text-font-monospace">Kamar berukuran luas 32 m2
-                                      Kamar mandi shower</p>
+                                  <p class="card-text-font-monospace">
 
                                   <div class="d-flex justify-content-between align-items-center">
 
@@ -301,7 +300,6 @@
 
                               <div class="card-body">
                                   <p class="card-text">Deluxe Room</p>
-                                  <p class="card-text">Memiliki ukuran luas standar sekitar 40 meter persegi</p>
                                   <div class="d-flex justify-content-between align-items-center">
 
 
@@ -311,13 +309,12 @@
                       </div>
                       <div class="col">
                           <div class="card shadow-sm">
-                              <img class="bd-placeholder-img card-img-top" src="{{ asset('img/premier.jpg') }}" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                              <img class="bd-placeholder-img card-img-top" src="{{ asset('img/Presidential Suite.jpg') }}" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                               <title>Placeholder</title>
                               <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
 
                               <div class="card-body">
-                                  <p class="card-text">Premier Room</p>
-                                  <p class="card-text">Memiliki ukuran 30 m2 dan kasur ukuran queen</p>
+                                  <p class="card-text">Presidential Suite</p>
                                   <div class="d-flex justify-content-between align-items-center">
 
 
@@ -338,7 +335,7 @@
                   </div>
               </div>
               <br>
-              <p class="fs-6 text-center">Enjoy Our Facilities</p>
+              <p class="fs-4 text-center">Enjoy Our Facilities</p>
               <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" style="margin-top:10px; margin-left:100px;">
                   @foreach($fashotel as $i => $fashotell)
                   <div class="col">
