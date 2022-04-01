@@ -8,10 +8,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
     @include('template.head')
     <style>
         .main-sidebar {
-            min-height: 109% !important;
+            min-height: 107% !important;
         }
 
     </style>
+
+    <script>
+        $(document).ready(function(){
+            $('.    -me').datepicker({
+                format: 'dd-mm-yyyy',
+            });
+        });
+    </script>
 </head>
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
@@ -53,11 +61,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @csrf
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" name="nm_tamu" class="form-control" style="width:200px;" placeholder="Search.." aria-label="Recipient's username" aria-describedby="button-addon2">
+                                    <input type="text" name="nm_tamu" class="form-control" style="width:200px;" placeholder="Cari nama tamu" aria-label="Recipient's username" aria-describedby="button-addon2">
 
                                 </div>
                                 <div class="col">
-                                    <button class="btn btn-danger" type="submit" id="button-addon2">Search</button>
+                                    <button class="btn btn-danger" type="submit" id="button-addon2">Cari</button>
 
                                 </div>
                                 <div class="col">
@@ -75,10 +83,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @csrf
                             <div class="row row-md-5">
                                 <div class="col col-md-6">
-                                    <input class="form-control" type="date" name="tglcekin" id="button-addon2" style="height:40px; width:180px; margin-right:100px">
+                                    <input type="date" name="tglcekin" class="form-control" id="tglcekin" style="width: 180px;">
                                 </div>
-                                <div class="col col-md-5">
-                                    <button class="btn btn-warning" type="submit" style="margin-left:50px">cari</button>
+                                <div class="col col-md-5"  style="position:relative; left:60px;">
+                                    <button class="btn btn-warning" type="submit">cari</button>
                                 </div>
 
                             </div>
@@ -96,14 +104,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
             <table class="table table-bordered">
                 <tr>
-                    <th>No</th>
-                    <th>Nama Pemesan</th>
-                    <th>Nama Tamu</th>
-                    <th>Tanggal Check-in</th>
-                    <th>Tanggal Check-out</th>
-                    <th>Tipe Kamar</th>
-                    <th>Jumlah Kamar</th>
-                    <th width="280px">Action</th>
+                    <th class="bg-danger">No</th>
+                    <th class="bg-danger">Nama Pemesan</th>
+                    <th class="bg-danger">Nama Tamu</th>
+                    <th class="bg-danger">Tanggal Check-in</th>
+                    <th class="bg-danger">Tanggal Check-out</th>
+                    <th class="bg-danger">Tipe Kamar</th>
+                    <th class="bg-danger">Jumlah Kamar</th>
+                    <th class="bg-danger" width="280px">Action</th>
                 </tr>
                 @foreach ($reservasi as $i => $res)
                 <tr>
@@ -131,9 +139,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 @endforeach
             </table>
             <!-- /.content -->
+            {!! $reservasi->links() !!}
         </div>
         <!-- /.content-wrapper -->
+        </div>
         <!-- Control Sidebar -->
+        </div>
         <!-- <aside class="control-sidebar control-sidebar-dark">
     Control sidebar content goes here
     <div class="p-3">

@@ -8,7 +8,42 @@ scratch. This page gets rid of all links and provides the needed markup only.
     @include('template.head')
     <style>
         .main-sidebar {
-            min-height: 109% !important;
+            min-height: 107% !important;
+        }
+        .button-24 {
+            background: #d68d96;
+            border: 1px solid #d68d96;
+            border-radius: 6px;
+            box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 14px;
+            min-height: 35px;
+            outline: 0;
+            padding: 10px 15px;
+            text-align: center;
+            text-rendering: geometricprecision;
+            text-transform: none;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: middle;
+        }
+
+        .button-24:hover,
+        .button-24:active {
+            background-color: initial;
+            background-position: 0 0;
+            color: #FF4742;
+        }
+
+        .button-24:active {
+            opacity: .5;
         }
 
     </style>
@@ -33,24 +68,27 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <h2>Fasilitas Kamar</h2>
                     </div>
                     <div class="pull-right">
-                        <a class="btn btn-success" href="{{ route('faskamar.create') }}"> Input Data</a>
+                        <a class="btn button-24" href="{{ route('faskamar.create') }}"> Input Data</a>
                     </div>
                 </div>
             </div>
             <br>
             @if ($message = Session::get('success'))
-            <div class="alert alert-success">
+            <div class="alert alert-danger">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
                 <p>{{ $message }}</p>
             </div>
             @endif
 
             <table class="table table-bordered">
                 <tr>
-                    <th>No</th>
-                    <th>Nama Fasilitas Kamar</th>
-                    <th>Tipe Kamar</th>
-                    <th>Gambar</th>
-                    <th width="280px">Action</th>
+                    <th class="bg-danger">No</th>
+                    <th class="bg-danger">Nama Fasilitas Kamar</th>
+                    <th class="bg-danger">Tipe Kamar</th>
+                    <th class="bg-danger">Gambar</th>
+                    <th class="bg-danger" width="280px">Action</th>
                 </tr>
                 @foreach ($fasilitaskmr as $i => $fas)
                 <tr>
@@ -75,6 +113,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </tr>
                 @endforeach
             </table>
+            {!! $fasilitaskmr->links() !!}
             <!-- /.content-wrapper -->
         </div>
         <!-- Control Sidebar -->

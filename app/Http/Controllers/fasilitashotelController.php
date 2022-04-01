@@ -16,7 +16,7 @@ class fasilitashotelController extends Controller
      */
     public function index()
     {
-        $fasilitashotel = fasilitashotel::latest()->paginate(10);
+        $fasilitashotel = fasilitashotel::latest()->paginate(5);
         return view('fashotel.index',compact('fasilitashotel'));
     }
 

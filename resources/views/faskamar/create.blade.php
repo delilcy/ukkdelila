@@ -8,7 +8,43 @@ scratch. This page gets rid of all links and provides the needed markup only.
     @include('template.head')
     <style>
         .main-sidebar {
-            min-height: 109% !important;
+            min-height: 100% !important;
+        }
+
+        .button-24 {
+            background: #d68d96;
+            border: 1px solid #d68d96;
+            border-radius: 6px;
+            box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 14px;
+            min-height: 35px;
+            outline: 0;
+            padding: 10px 15px;
+            text-align: center;
+            text-rendering: geometricprecision;
+            text-transform: none;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: middle;
+        }
+
+        .button-24:hover,
+        .button-24:active {
+            background-color: initial;
+            background-position: 0 0;
+            color: #FF4742;
+        }
+
+        .button-24:active {
+            opacity: .5;
         }
 
     </style>
@@ -33,11 +69,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <h2>Tambah Data Fasilitas Kamar</h2>
                     </div>
                     <div class="pull-right">
-                        <a class="btn btn-primary" href="{{ route('faskamar.index') }}"> Kembali</a>
+                        <a class="btn button-24" href="{{ route('faskamar.index') }}"> Kembali</a>
                     </div>
                 </div>
             </div>
-
+            <br>
             @if ($errors->any())
             <div class="alert alert-danger">
                 <strong>Maaf</strong> Data yang anda inputkan bermasalah.<br><br>
@@ -62,7 +98,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <strong>Tipe Kamar:</strong>
-                            <textarea class="form-control" style="height:100px" name="tipekamar" placeholder="tipe kamar"></textarea>
+                             <select name="tipekamar" id="tipekamar" class="form-control">
+                                <option value="Deluxe">Deluxe</option>
+                                <option value="Superior">Superior</option>
+                                <option value="Presidential Suite">Presidential Suite</option>
+                            </select>
+                           
                         </div>
                     </div>
                     <form>
@@ -72,7 +113,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <input type="file" class="form-control-file" id="exampleFormControlFile1" name="gambar">
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                                <button type="submit" class="btn btn-primary">Simpan</button>
+                                <button type="submit" class="btn button-24">Simpan</button>
                             </div>
                         </div>
 

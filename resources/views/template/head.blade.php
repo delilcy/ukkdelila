@@ -14,5 +14,8 @@
     .main-sidebar {
         min-height: 110%;
     }
+    .main-footer {
+         background-color:#f5a9ae !important;
+    }
 
 </style>

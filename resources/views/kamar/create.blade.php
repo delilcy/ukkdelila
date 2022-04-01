@@ -11,6 +11,42 @@ scratch. This page gets rid of all links and provides the needed markup only.
             min-height: 109% !important;
         }
 
+        .button-24 {
+            background: #d68d96;
+            border: 1px solid #d68d96;
+            border-radius: 6px;
+            box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+            font-size: 16px;
+            font-weight: 800;
+            line-height: 16px;
+            min-height: 40px;
+            outline: 0;
+            padding: 12px 14px;
+            text-align: center;
+            text-rendering: geometricprecision;
+            text-transform: none;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            vertical-align: middle;
+        }
+
+        .button-24:hover,
+        .button-24:active {
+            background-color: initial;
+            background-position: 0 0;
+            color: #FF4742;
+        }
+
+        .button-24:active {
+            opacity: .5;
+        }
+
     </style>
 </head>
 <body class="hold-transition sidebar-mini">
@@ -31,16 +67,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <h2>Tambah Data Kamar</h2>
                     </div>
                     <div class="pull-right">
-                        <a class="btn btn-primary" href="{{ route('kamar.index') }}"> Kembali</a>
+                        <a class="btn button-24" href="{{ route('kamar.index') }}"> Kembali</a>
                     </div>
                 </div>
             </div>
-
+            <br>
             @if ($errors->any())
             <div class="alert alert-danger">
                 <strong>Maaf</strong> Data yang anda inputkan bermasalah.<br><br>
                 <ul>
                     @foreach ($errors->all() as $error)
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                     <li>{{ $error }}</li>
                     @endforeach
                 </ul>
@@ -49,7 +88,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
             <form action="{{ route('kamar.store') }}" method="POST">
                 @csrf
-
+                <br>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
@@ -57,17 +96,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <select name="tipe_kamar" id="tipe_kamar" class="form-control">
                                 <option value="Deluxe">Deluxe</option>
                                 <option value="Superior">Superior</option>
+                                <option value="Presidential Suite">Presidential Suite</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
                             <strong>Jumlah Kamar:</strong>
-                            <input type="number" class="form-control" style="height:50px" name="jml_kamar" placeholder="jumlah kamar"></input>
+                            <input type="number" class="form-control" style="height:35px" name="jml_kamar" placeholder="jumlah kamar"></input>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                        <button type="submit" class="btn btn-primary">Simpan</button>
+                        <button type="submit" class="btn button-24">Simpan</button>
                     </div>
                 </div>
 
