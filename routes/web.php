@@ -17,16 +17,20 @@ use App\http\Controllers\resepsionisController;
 Route::get('cetak', function () {
     return view('reservasi.cetak');
 });
-// Route::get('pesanan', function () {
-//     return view('reservasi.pesan');
-// });
+// Route::get('/', function () {
+//     $faskmr=DB::table('fasilitaskmr')->get();
+//         $fashotel=DB::table('fasilitashotel')->get();
+        
+//         return view('halaman', compact('faskmr', 'fashotel'));
+// })->name('halaman');
+Route::get('/', 'IndexController@index')->name('home');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/cetak/{id_reservasi}', 'reservasiController@cetak')->name('cetak');
 Route::get('/pesanan', 'reservasiController@pesan')->name('pesanan');
-Route::get('/', 'HomeController@beranda')->name('beranda');
+Route::get('/beranda', 'HomeController@beranda')->name('beranda');
 Route::get('/dashboard',function() {
     return 'Dashboard';
 })->name('dashboard');

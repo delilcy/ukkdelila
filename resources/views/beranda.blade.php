@@ -10,7 +10,7 @@
       <link href="{{ asset('css/app.css') }}" rel="stylesheet">
       <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
       <script src="{{ asset('js/app.js') }}"></script>
-      <nav class="navbar navbar-expand-lg fixed-top  navbar-light" style="background-color: #fa9e96;">
+      <nav class="navbar navbar-expand-lg fixed-top  navbar-light" style="background-color: #d5e386;">
           <a class="navbar-brand" href="#"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -183,13 +183,13 @@
                       <div class="col-md">
                           <div class="form-floating">
                               <input type="number" name="jml_kmr" class="form-control" id="floatingInputGrid">
-                              <label for="floatingInputGrid">Jumlah Kamar</label>
+                              <label for="floatingInputGrid">Room</label>
                           </div>
                       </div>
                       <div class="col-md">
                           <div class="form-floating">
                               <a class="btn  btn-lg" style="height:50px; padding-top:10px; left:500px; background-color: #fa9e96;" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                  Book
+                                  Book Now
                               </a>
                           </div>
                       </div>
@@ -201,10 +201,10 @@
                           <div class="card-body">
                               <div class="row g-2 align-items-center" style="margin-left:150px;">
                                   <div class="col-3">
-                                      <label for="inputPassword6" class="form-label margin1">Nama Pemesan</label>
+                                      <label for="inputPassword6" class="form-label margin1">Customer</label>
                                   </div>
                                   <div class="col-md-5">
-                                      <input type="text" name="nm_pemesan" class="form-control" aria-describedby="passwordHelpInline">
+                                      <input type="text" name="nm_pemesan" class="form-control" aria-describedby="passwordHelpInline" placeholder="Name">
                                   </div>
                                   <div class="col-md-5">
                                   </div>
@@ -212,16 +212,16 @@
                               <br>
                               <div class="row g-2 align-items-center" style="margin-left:150px;">
                                   <div class="col-3">
-                                      <label for="inputPassword6" class="form-label margin2">Email</label>
+                                      <label for="inputPassword6" class="form-label margin2">Email Address</label>
                                   </div>
                                   <div class="col-md-5">
-                                      <input type="text" name="email" class="form-control" aria-describedby="passwordHelpInline">
+                                      <input type="text" name="email" class="form-control" aria-describedby="passwordHelpInline" placeholder="@gmail.com">
                                   </div>
                               </div>
                               <br>
                               <div class="row g-2 align-items-center" style="margin-left:150px;">
                                   <div class="col-3">
-                                      <label for="inputPassword6" class="form-label margin3">No Telepon</label>
+                                      <label for="inputPassword6" class="form-label margin3">Mobile Number</label>
                                   </div>
                                   <div class="col-md-5">
                                       <input type="text" name="notlp" class="form-control" aria-describedby="passwordHelpInline">
@@ -230,10 +230,10 @@
                               <br>
                               <div class="row g-2 align-items-center" style="margin-left:150px;">
                                   <div class="col-3">
-                                      <label for="inputPassword6" class="form-label margin4">Nama Tamu</label>
+                                      <label for="inputPassword6" class="form-label margin4">Guest</label>
                                   </div>
                                   <div class="col-md-5">
-                                      <input type="text" name="nm_tamu" class="form-control" aria-describedby="passwordHelpInline">
+                                      <input type="text" name="nm_tamu" class="form-control" aria-describedby="passwordHelpInline" placeholder="Name">
                                   </div>
                                   <div class="col-md-5">
                                   </div>
@@ -242,7 +242,7 @@
                               <br>
                               <div class="row g-2 align-items-center" style="margin-left:150px;">
                                   <div class="col-3">
-                                      <label for="inputPassword6" class="form-label margin5">Tipe Kamar</label>
+                                      <label for="inputPassword6" class="form-label margin5">Room Type</label>
                                   </div>
                                   <div class="col-md-5">
 
@@ -250,13 +250,13 @@
                                           <option selected class="form-select" aria-label="Disabled select example" disabled>- Pilih Salah Satu -</option>
                                           <option value="Superior">Superior Room</option>
                                           <option value="Deluxe">Deluxe Room</option>
-                                          <option value="Presidential Suite">Presidential Suite</option>
+                                          <option value="Presidential Suite">Suite Room</option>
                                       </select>
                                   </div>
                                   <div class="col-md-5">
                                   </div>
                               </div><br>
-                              <button type="submit" class="btn btn-lg" style="background-color: #fa9e96;">Book Now</button>
+                              <button type="submit" class="btn btn-lg" style="background-color: #fa9e96;">CONFIRM RESERVATION</button>
                           </div>
                       </div>
                   </div>
@@ -335,7 +335,7 @@
                   </div>
               </div>
               <br>
-              <p class="fs-4 text-center">Enjoy Our Facilities</p>
+              <p class="fs-3 text-center">Enjoy Our Facilities</p>
               <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4" style="margin-top:10px; margin-left:100px;">
                   @foreach($fashotel as $i => $fashotell)
                   <div class="col">
@@ -407,8 +407,8 @@
           </div>
       </main>
 
-      <footer class="text-muted py-5" style="background-color: #fa9e96;">
-          <div class="container" style="background-color: #fa9e96;">
+      <footer class="text-muted py-5" style="background-color: #d5e386;">
+          <div class="container" style="background-color: #d5e386;">
               <p class="float-end mb-1">
                   <a href="#">Back to top</a>
               </p>

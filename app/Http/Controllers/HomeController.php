@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('halaman');
     }
     public function beranda()
     {
@@ -33,6 +33,15 @@ class HomeController extends Controller
         $fashotel=DB::table('fasilitashotel')->get();
         // dd($faskmr, $fashotel);
         return view('beranda', compact('faskmr', 'fashotel'));
+        
+    }
+    public function halaman()
+    {
+        
+        $faskmr=DB::table('fasilitaskmr')->get();
+        $fashotel=DB::table('fasilitashotel')->get();
+        
+        return view('halaman', compact('faskmr', 'fashotel'));
         
     }
 }
