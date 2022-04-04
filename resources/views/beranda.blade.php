@@ -10,17 +10,17 @@
       <link href="{{ asset('css/app.css') }}" rel="stylesheet">
       <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
       <script src="{{ asset('js/app.js') }}"></script>
-      <nav class="navbar navbar-expand-lg fixed-top  navbar-light" style="background-color: #d5e386;">
+      <nav class="navbar navbar-expand-lg fixed-top  navbar-light justify-content-center" style="background-color: #d5e386;">
           <a class="navbar-brand" href="#"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-top:5px;">
+              <ul class="navbar-nav justify-content-center mr-auto">
                   <li class="nav-item active">
                       <a class="nav-link fs-5" href="#">
-                          <img src="{{ asset('img/strawberries-removebg-preview (1).png') }}" width="40" height="40" class="d-inline-block align-top" alt="">
+                          <img src="{{ asset('img/strawberries-removebg-preview (1).png') }}" width="40" height="40" class="d-inline-block align-top" alt="" style="margin-top:-10px;">
                           Strawberries Hotel<span class="sr-only-bold">
 
                           </span></a>
@@ -247,7 +247,7 @@
                                   <div class="col-md-5">
 
                                       <select name="tipe_kmr" class="form-select form-select-sm" aria-label=".form-select-sm example">
-                                          <option selected class="form-select" aria-label="Disabled select example" disabled>- Pilih Salah Satu -</option>
+                                          <option selected class="form-select" aria-label="Disabled select example" disabled>Select One</option>
                                           <option value="Superior">Superior Room</option>
                                           <option value="Deluxe">Deluxe Room</option>
                                           <option value="Presidential Suite">Suite Room</option>

@@ -155,7 +155,6 @@
             </div>
 
         </section>
-koe sampe jamber? gak reti e paling sediluk ngkas diusir pak willy
 
         <div class="card">
             <div class="card-body" style="background-color: #fa9e96;">
