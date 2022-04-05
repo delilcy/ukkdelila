@@ -63,6 +63,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="content-wrapper p-4">
 
             <!-- /.content-wrapper -->
+
             <div class="row">
                 <div class="col-lg-12 margin-tb">
                     <div class="pull-left">
@@ -74,7 +75,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </div>
             </div>
             <br>
-            <div class="row">
+            <form disabled>
+                <div class="mb-2">
+                    <label class="form-label">Tipe Kamar</label>
+                    <input class="form-control" style="width:150px;" value=" {{ $kamar->tipe_kamar }}"   disabled>
+                    
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Jumlah Kamar</label>
+                    <input class="form-control" style="width:150px;" value="  {{ $kamar->jml_kamar }}" disabled>
+                </div>
+            </form>
+            <br>
+            {{-- <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Tipe Kamar:</strong>
@@ -87,7 +100,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         {{ $kamar->jml_kamar }}
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- /.content-wrapper -->
         </div>
         <!-- Control Sidebar -->

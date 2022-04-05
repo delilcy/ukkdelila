@@ -66,40 +66,59 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="row">
                 <div class="col-lg-12 margin-tb">
                     <div class="pull-left">
-                        <h2> Tampilkan Fasilitas Hotel </h2>
+                        <h2> Fasilitas Hotel </h2>
                     </div>
                     <div class="pull-right">
                         <a class="btn button-24" href="{{ route('fashotel.index') }}"> Kembali</a>
                     </div>
                 </div>
             </div>
-            <br>
-            <div class="row">
+        
+            <form disabled>
+                <div class="form-group">
+
+                    <br>
+                    <img src="{{ url('/fasilitashotel2/') . '/' . $fasilitashotel[0]->gambar}}" alt="{{$fasilitashotel[0]->gambar}}" style="width:150px; height:150px">
+
+                </div>
+
+                <div class="mb-2">
+                    <label class="form-label">Nama Fasilitas Hotel</label>
+                    <input class="form-control" style="width:150px;" value="  {{ $fasilitashotel[0]->nm_fashotel }}" disabled>
+
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Keterangan</label>
+                    <input class="form-control" value=" {{ $fasilitashotel[0]->keterangan }}" disabled>
+                </div>
+
+            </form>
+            {{-- <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Nama Fasilitas Hotel:</strong>
                         {{ $fasilitashotel[0]->nm_fashotel }}
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Keterangan:</strong>
-                        {{ $fasilitashotel[0]->keterangan }}
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Gambar:</strong>
-                        <br>
-                        <br>
-                        <img src="{{ url('/fasilitashotel2/') . '/' . $fasilitashotel[0]->gambar}}" alt="{{$fasilitashotel[0]->gambar}}" style="width:150px; height:150px">
-
-                    </div>
-                </div>
-            </div>
-            <!-- /.content-wrapper -->
         </div>
-        <!-- Control Sidebar -->
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Keterangan:</strong>
+            {{ $fasilitashotel[0]->keterangan }}
+        </div>
+    </div> --}}
+    {{-- <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Gambar:</strong>
+            <br>
+            <br>
+            <img src="{{ url('/fasilitashotel2/') . '/' . $fasilitashotel[0]->gambar}}" alt="{{$fasilitashotel[0]->gambar}}" style="width:150px; height:150px">
+
+        </div>
+    </div>
+    </div> --}}
+    <!-- /.content-wrapper -->
+    </div>
+    <!-- Control Sidebar -->
     </div>
     <!-- <aside class="control-sidebar control-sidebar-dark">
     Control sidebar content goes here

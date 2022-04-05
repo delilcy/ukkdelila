@@ -6,8 +6,9 @@
       <meta name="description" content="">
       <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
       <meta name="generator" content="Hugo 0.88.1">
+      <link rel="icon" href="{{ asset('img/strawberries-removebg-preview (1).png') }}" type="image/icon type">
       <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-      <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+      <link href="{{ asset('css/app2.css') }}" rel="stylesheet">
       <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
       <script src="{{ asset('js/app.js') }}"></script>
       <nav class="navbar navbar-expand-lg fixed-top  navbar-light justify-content-center" style="background-color: #d5e386;">
@@ -67,32 +68,19 @@
       <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
       <style>
-          .margin1 {
-              margin-right: 0px;
-          }
-
-          .margin2 {
-              margin-left: -70px;
-          }
-
-          .margin3 {
-              margin-left: -26px;
-          }
-
-          .margin4 {
-              margin-left: -27px;
-          }
-
-          .margin5 {
-              margin-left: -30px;
-          }
-
-          .margin6 {
-              margin-right: 0px;
-          }
-
           .geser {
               margin-left: 150px;
+              text-align: left;
+          }
+
+          .geser1,
+          .geser2,
+          .geser3,
+          .geser4,
+          .geser5,
+          .geser6 {
+
+              text-align: left;
           }
 
           .bd-placeholder-img {
@@ -110,12 +98,13 @@
           }
 
           .circular--square {
-              border-radius:50% 50%;
-              margin-left:50px;
+              border-radius: 50% 50%;
+              margin-left: 50px;
           }
+
           .circular--square img {
               width: 130px;
-              height:130px;
+              height: 130px;
               border-radius: 50% 50%;
           }
 
@@ -188,7 +177,7 @@
                       </div>
                       <div class="col-md">
                           <div class="form-floating">
-                              <a class="btn  btn-lg" style="height:50px; padding-top:10px; left:500px; background-color: #fa9e96;" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                              <a class="btn text-white btn-lg" style="height:56px; padding-top:10px; left:500px; background-color: #FF4550;" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                                   Book Now
                               </a>
                           </div>
@@ -200,19 +189,19 @@
                       <div class="card text-center" style="width: 720px;">
                           <div class="card-body">
                               <div class="row g-2 align-items-center" style="margin-left:150px;">
-                                  <div class="col-3">
-                                      <label for="inputPassword6" class="form-label margin1">Customer</label>
+                                  <div class="col-3 text-start">
+                                      <label for="inputPassword6" class="form-label geser1">Customer</label>
                                   </div>
                                   <div class="col-md-5">
-                                      <input type="text" name="nm_pemesan" class="form-control" aria-describedby="passwordHelpInline" placeholder="Name">
+                                      <input type="text" name="nm_pemesan" class="form-control" aria-describedby="passwordHelpInline" placeholder="name">
                                   </div>
                                   <div class="col-md-5">
                                   </div>
                               </div>
                               <br>
                               <div class="row g-2 align-items-center" style="margin-left:150px;">
-                                  <div class="col-3">
-                                      <label for="inputPassword6" class="form-label margin2">Email Address</label>
+                                  <div class="col-3 text-start">
+                                      <label for="inputPassword6" class="form-label geser2">Email Address</label>
                                   </div>
                                   <div class="col-md-5">
                                       <input type="text" name="email" class="form-control" aria-describedby="passwordHelpInline" placeholder="@gmail.com">
@@ -220,20 +209,20 @@
                               </div>
                               <br>
                               <div class="row g-2 align-items-center" style="margin-left:150px;">
-                                  <div class="col-3">
-                                      <label for="inputPassword6" class="form-label margin3">Mobile Number</label>
+                                  <div class="col-3 text-start">
+                                      <label for="inputPassword6" class="form-label geser3">Mobile Number</label>
                                   </div>
                                   <div class="col-md-5">
-                                      <input type="text" name="notlp" class="form-control" aria-describedby="passwordHelpInline">
+                                      <input type="text" name="notlp" class="form-control" aria-describedby="passwordHelpInline" placeholder="ex. 0823XXX">
                                   </div>
                               </div>
                               <br>
                               <div class="row g-2 align-items-center" style="margin-left:150px;">
-                                  <div class="col-3">
-                                      <label for="inputPassword6" class="form-label margin4">Guest</label>
+                                  <div class="col-3 text-start">
+                                      <label for="inputPassword6" class="form-label geser4">Guest</label>
                                   </div>
                                   <div class="col-md-5">
-                                      <input type="text" name="nm_tamu" class="form-control" aria-describedby="passwordHelpInline" placeholder="Name">
+                                      <input type="text" name="nm_tamu" class="form-control" aria-describedby="passwordHelpInline" placeholder="name">
                                   </div>
                                   <div class="col-md-5">
                                   </div>
@@ -241,13 +230,13 @@
 
                               <br>
                               <div class="row g-2 align-items-center" style="margin-left:150px;">
-                                  <div class="col-3">
+                                  <div class="col-3 text-start">
                                       <label for="inputPassword6" class="form-label margin5">Room Type</label>
                                   </div>
                                   <div class="col-md-5">
 
                                       <select name="tipe_kmr" class="form-select form-select-sm" aria-label=".form-select-sm example">
-                                          <option selected class="form-select" aria-label="Disabled select example" disabled>Select One</option>
+                                          <option selected class="form-select" aria-label="Disabled select example" disabled>select one</option>
                                           <option value="Superior">Superior Room</option>
                                           <option value="Deluxe">Deluxe Room</option>
                                           <option value="Presidential Suite">Suite Room</option>
@@ -256,7 +245,7 @@
                                   <div class="col-md-5">
                                   </div>
                               </div><br>
-                              <button type="submit" class="btn btn-lg" style="background-color: #fa9e96;">CONFIRM RESERVATION</button>
+                              <button type="submit" class="btn text-white btn-lg" style="background-color: #FF4550;">CONFIRM RESERVATION</button>
                           </div>
                       </div>
                   </div>
@@ -265,7 +254,7 @@
 
 
           <div class="card">
-              <div class="card-body" style="background-color: #fa9e96;">
+              <div class="card-body" style="background-color: #d5e386;">
                   <p class="fs-2">Rooms & Suites</p>
                   <p class="font-monospace">Strawberries Hotel stunning and exquisite interior design incorporates both traditional and modern features. </p>
 
@@ -284,10 +273,10 @@
                                   <p class="card-text">Superior Room</p>
                                   <p class="card-text-font-monospace">
 
-                                  <div class="d-flex justify-content-between align-items-center">
+                                      <div class="d-flex justify-content-between align-items-center">
 
 
-                                  </div>
+                                      </div>
                               </div>
                           </div>
                       </div>
@@ -314,7 +303,7 @@
                               <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
 
                               <div class="card-body">
-                                  <p class="card-text">Presidential Suite</p>
+                                  <p class="card-text">Suite Room</p>
                                   <div class="d-flex justify-content-between align-items-center">
 
 
@@ -325,11 +314,11 @@
                   </div>
               </div>
           </div>
-         
+
 
           <div class="container">
               <div class="card">
-                  <div class="card-body" style="background-color: #fa9e96;">
+                  <div class="card-body" style="background-color: #d5e386;">
                       <p class="fs-2">Hotel Facilities</p>
                       <p class="font-monospace"> </p>
                   </div>
@@ -371,7 +360,7 @@
           </div>
           <div class="container">
               <div class="card" style="margin-top:25px;">
-                  <div class="card-body" style="background-color: #fa9e96;">
+                  <div class="card-body" style="background-color: #d5e386;">
                       <p class="fs-2">Room Facilities</p>
                       <p class="font-monospace"></p>
                   </div>
@@ -409,9 +398,9 @@
 
       <footer class="text-muted py-5" style="background-color: #d5e386;">
           <div class="container" style="background-color: #d5e386;">
-              <p class="float-end mb-1">
-                  <a href="#">Back to top</a>
-              </p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#d68d96" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+              </svg>
               <p class="mb-1">Copyright © 2022 DELILA S R. All rights reserved.</p>
           </div>
       </footer>

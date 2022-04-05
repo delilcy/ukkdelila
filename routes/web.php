@@ -23,11 +23,11 @@ Route::get('cetak', function () {
         
 //         return view('halaman', compact('faskmr', 'fashotel'));
 // })->name('halaman');
-Route::get('/', 'IndexController@index')->name('home');
+Route::get('/', 'IndexController@index')->name('index');
 
 Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/cetak/{id_reservasi}', 'reservasiController@cetak')->name('cetak');
 Route::get('/pesanan', 'reservasiController@pesan')->name('pesanan');
 Route::get('/beranda', 'HomeController@beranda')->name('beranda');

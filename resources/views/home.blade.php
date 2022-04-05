@@ -6,6 +6,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <html lang="en">
 <head>
     @include('template.head')
+      <link rel="icon" href="{{ asset('img/strawberries-removebg-preview (1).png') }}" type="image/icon type">
     <style>
         .main-sidebar {
             min-height: 109% !important;

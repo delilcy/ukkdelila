@@ -8,7 +8,7 @@
     <meta name="generator" content="Hugo 0.88.1">
     <link rel="icon" href="{{ asset('img/strawberries-removebg-preview (1).png') }}" type="image/icon type">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app2.css') }}" rel="stylesheet">
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
     <nav class="navbar navbar-expand-lg fixed-top navbar-light justify-content-center" style="background-color: #d5e386;">
@@ -157,7 +157,7 @@
         </section>
 
         <div class="card">
-            <div class="card-body" style="background-color: #fa9e96;">
+            <div class="card-body" style="background-color: #d5e386;">
                 <p class="fs-2">Rooms & Suites</p>
                 <p class="font-monospace">Strawberries Hotel stunning and exquisite interior design modern features. </p>
 
@@ -221,7 +221,7 @@
 
         <div class="container">
             <div class="card">
-                <div class="card-body" style="background-color: #fa9e96;">
+                <div class="card-body" style="background-color: #d5e386;">
                     <p class="fs-2">Hotel Facilities</p>
                     <p class="font-monospace"> </p>
                 </div>
@@ -263,7 +263,7 @@
         </div>
         <div class="container">
             <div class="card" style="margin-top:25px;">
-                <div class="card-body" style="background-color: #fa9e96;">
+                <div class="card-body" style="background-color: #d5e386;">
                     <p class="fs-2">Room Facilities</p>
                     <p class="font-monospace"></p>
                 </div>
@@ -302,7 +302,9 @@
     <footer class="text-muted py-5" style="background-color: #d5e386;">
         <div class="container" style="background-color: #d5e386;">
             <p class="float-end mb-1">
-                <a href="#">Back to top</a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#d68d96" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+  <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+</svg></a>
             </p>
             <p class="mb-1">Copyright © 2022 DELILA S R. All rights reserved.</p>
         </div>

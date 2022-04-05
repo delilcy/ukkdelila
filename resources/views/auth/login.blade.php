@@ -3,9 +3,11 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8" style="top:-75px;">
-            <div class="card" style="width:60%; height:80%; margin-left: 150px; margin-top: 160px;">
-                <div class="card-header text-center font-weight-bold" style="background-color: #aeb4e8; font-size: 24pt; font-color: #fffdfc">{{ __('Login') }}</div>
+        <div class="col-md-8" style="top:65px;">
+            <div class="card" style="position: relative; z-index: 1; max-width: 360px; margin: 0 auto 100px; padding: 45px;   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);">
+                <p style="text-align: center; font-size: 24pt;">
+                    {{ __('Login') }}
+                </p>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
@@ -19,8 +21,8 @@
 
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('') }}</label>
 
-                            <div class="col-md-8" style="margin-left:70px;">
-                                <input id="email" type="email" style="height: 50px;" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="E-Mail">
+                            <div class="col-md-12" style="margin-left:5px;">
+                                <input id="email" type="email" style=" font-family: Roboto sans-serif; background: #f2f2f2;  width: 100%; border: 0;  margin: 0 0 15px; padding: 15px; box-sizing: border-box; font-size: 14px;outline: 0;" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="email">
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -31,8 +33,8 @@
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('') }}</label>
 
-                            <div class="col-md-8" style="margin-left:70px;">
-                                <input id="password" type="password" style="height: 50px;" placeholder="Password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                            <div class="col-md-12" style="margin-left:5px;">
+                                <input id="password" type="password" style=" font-family: Roboto sans-serif; background: #f2f2f2;  width: 100%; border: 0;  margin: 0 0 15px; padding: 15px; box-sizing: border-box; font-size: 14px;outline: 0;" placeholder="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
@@ -58,7 +60,7 @@
 
                                 @if (Route::has('password.request'))
                                 <br>
-                                <a class="btn btn-link" style="margin-left: -30px;" href="{{ route('password.request') }}">
+                                <a class="btn btn-link" style="margin-left: -50px;" href="{{ route('password.request') }}">
                                     {{ __('Forgot Your Password?') }}
                                 </a>
                                 @endif

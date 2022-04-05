@@ -2,20 +2,16 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
 <style>
-
-
-
-/* CSS */
 .button-62 {
   background: linear-gradient(to bottom right, #aeb4e8, #fcbdf0);
   border: 0;
-  border-radius: 12px;
+  border-radius: 5px;
   color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
   font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  font-size: 16px;
-  font-weight: 200%;
+  font-size: 10px;
+  font-weight: 90%;
   line-height: 3.0;
   outline: transparent;
   padding: 0 1rem;
@@ -26,7 +22,7 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   white-space: nowrap;
-  margin-left: -70px;
+  margin-left: -80px;
   
 }
 
@@ -38,18 +34,20 @@
   box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
 }
 .button-62{
-    width: 100%;
-}
+    width: 227px;
+
 body {
-    background-image:url({{url('img/sky.jpg')}});
+    
+    background-color: red;
     background-repeat: no-repeat;
     background-size: cover;
     
+
 }
 .button-2 {
   background: linear-gradient(to bottom right, #aeb4e8, #fcbdf0);
   border: 0;
-  border-radius: 12px;
+  border-radius: 5px;
   color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
@@ -80,9 +78,11 @@ body {
 .button-2{
     width: 100%;
 }
+
 </style>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="icon" href="{{ asset('img/strawberries-removebg-preview (1).png') }}" type="image/icon type">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -101,7 +101,7 @@ body {
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
 </head>
-<body>
+<body style="background-image: url('img/gra.jpg'); background-size : cover;">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm" style="background-color: #aeb4e8;">
             <div class="container">
@@ -154,7 +154,7 @@ body {
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-2">
             @yield('content')
         </main>
     </div>

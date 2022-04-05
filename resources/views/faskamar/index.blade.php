@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     @include('template.head')
     <style>
         .main-sidebar {
-            min-height: 107% !important;
+            min-height: 104% !important;
         }
         .button-24 {
             background: #d68d96;
@@ -96,7 +96,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <td>{{ $fas->nm_faskmr }}</td>
                     <td>{{ $fas->tipekamar }}</td>
                     <td>
-                        <img src="{{ url('/fasilitaskmr/') . '/' . $fas->gambar}}" alt="{{$fas->gambar}}"> </td>
+                        <img src="{{ url('/fasilitaskmr/') . '/' . $fas->gambar}}" alt="{{$fas->gambar}}" class="img-thumbnail rounded mx-auto d-block" style="width: 150px; height: 150px;"> </td>
                     <td>
                         <form action="{{ route('faskamar.destroy', $fas->id_faskmr) }}" method="POST">
 

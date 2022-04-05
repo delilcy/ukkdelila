@@ -10,6 +10,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         .main-sidebar {
             min-height: 107% !important;
         }
+
         .button-24 {
             background: #d68d96;
             border: 1px solid #d68d96;
@@ -33,6 +34,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             -webkit-user-select: none;
             touch-action: manipulation;
             vertical-align: middle;
+
         }
 
         .button-24:hover,
@@ -65,40 +67,57 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="row">
                 <div class="col-lg-12 margin-tb">
                     <div class="pull-left">
-                        <h2> Tampilkan Fasilitas Kamar </h2>
+                        <h2> Fasilitas Kamar </h2>
                     </div>
                     <div class="pull-right">
                         <a class="btn button-24" href="{{ route('faskamar.index') }}"> Kembali</a>
                     </div>
                 </div>
             </div>
-<br>
-            <div class="row">
+            <br>
+            <form disabled>
+                <div class="form-group">
+
+                    <img src="{{ url('/fasilitaskmr2/') . '/' . $fasilitaskmr[0]->gambar}}" alt="{{$fasilitaskmr[0]->gambar}}" style="width:40%; height:40%">
+
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Nama Fasilitas Kamar</label>
+                    <input class="form-control" style="width:150px;" value=" {{ $fasilitaskmr[0]->nm_faskmr }}" disabled>
+
+                </div>
+                <div class="mb-2">
+                    <label class="form-label">Tipe Kamar</label>
+                    <input class="form-control" style="width:150px;" value=" {{ $fasilitaskmr[0]->tipekamar }}" disabled>
+                </div>
+
+            </form>
+            {{-- <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Nama Fasilitas Kamar:</strong>
                         {{ $fasilitaskmr[0]->nm_faskmr }}
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Tipe Kamar:</strong>
-                        {{ $fasilitaskmr[0]->tipekamar }}
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Gambar:</strong>
-                        <br>
-                        <br>
-                        <img src="{{ url('/fasilitaskmr2/') . '/' . $fasilitaskmr[0]->gambar}}" alt="{{$fasilitaskmr[0]->gambar}}" style="width:40%; height:40%">
-
-                    </div>
-                </div>
-            </div>
-            <!-- /.content-wrapper -->
         </div>
-        <!-- Control Sidebar -->
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Tipe Kamar:</strong>
+            {{ $fasilitaskmr[0]->tipekamar }}
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="form-group">
+            <strong>Gambar:</strong>
+            <br>
+            <br>
+            <img src="{{ url('/fasilitaskmr2/') . '/' . $fasilitaskmr[0]->gambar}}" alt="{{$fasilitaskmr[0]->gambar}}" style="width:40%; height:40%">
+
+        </div>
+    </div>
+    </div> --}}
+    <!-- /.content-wrapper -->
+    </div>
+    <!-- Control Sidebar -->
     </div>
     <!-- <aside class="control-sidebar control-sidebar-dark">
     Control sidebar content goes here

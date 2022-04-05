@@ -101,7 +101,7 @@ class fasilitaskmrController extends Controller
         $request->validate([
             'nm_faskmr' => 'required',
             'tipekamar' => 'required',
-            'gambar' => 'required',
+            
         ]);
         // dd($request->id_faskmr);
         $update = DB::table('fasilitaskmr')
@@ -109,7 +109,7 @@ class fasilitaskmrController extends Controller
               ->update([
                   'nm_faskmr' => $request->nm_faskmr,
                   'tipekamar' => $request->tipekamar,
-                  'gambar' => $request->gambar,
+                  
               ]);
         return redirect()->route('faskamar.index')->with('success','Data berhasil di update');
     }
