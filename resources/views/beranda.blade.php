@@ -21,7 +21,7 @@
               <ul class="navbar-nav justify-content-center mr-auto">
                   <li class="nav-item active">
                       <a class="nav-link fs-5" href="#">
-                          <img src="{{ asset('img/strawberries-removebg-preview (1).png') }}" width="40" height="40" class="d-inline-block align-top" alt="" style="margin-top:-10px;">
+                          <img src="{{ asset('img/strawberries-removebg-preview (1).png') }}" width="40" height="40" class="d-inline-block align-top" alt="" style="margin-top:-8px;">
                           Strawberries Hotel<span class="sr-only-bold">
 
                           </span></a>
@@ -30,7 +30,7 @@
                       <a class="nav-link fs-5" href="{{route('beranda')}}">Home</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link fs-5" href="{{route('pesanan')}}">Pesanan</a>
+                      <a class="nav-link fs-5" href="{{route('pesanan')}}">Order</a>
                   </li>
                   <li class="nav-item dropdown">
                       <a id="navbarDropdown" class="nav-link fs-5 dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -159,19 +159,19 @@
                   <div class="row g-2 geser">
                       <div class="col-md">
                           <div class="form-floating">
-                              <input type="date" name="tglcekin" class="form-control" id="floatingInputGrid">
+                              <input type="date" name="tglcekin" class="form-control border border-warning border-2" id="floatingInputGrid">
                               <label for="floatingInputGrid geser">Check In</label>
                           </div>
                       </div>
                       <div class="col-md">
                           <div class="form-floating">
-                              <input type="date" name="tglcekout" class="form-control" id="floatingInputGrid">
+                              <input type="date" name="tglcekout" class="form-control border border-warning border-2" id="floatingInputGrid">
                               <label for="floatingInputGrid">Check Out</label>
                           </div>
                       </div>
                       <div class="col-md">
                           <div class="form-floating">
-                              <input type="number" name="jml_kmr" class="form-control" id="floatingInputGrid">
+                              <input type="number" name="jml_kmr" class="form-control border border-warning border-2" id="floatingInputGrid">
                               <label for="floatingInputGrid">Room</label>
                           </div>
                       </div>
@@ -186,8 +186,8 @@
                   </div>
                   <br>
                   <div class="collapse geser" id="collapseExample">
-                      <div class="card text-center" style="width: 720px;">
-                          <div class="card-body">
+                      <div class="card border text-center" style="width: 720px;">
+                          <div class="card-body" style="background-color: #fceeac;">
                               <div class="row g-2 align-items-center" style="margin-left:150px;">
                                   <div class="col-3 text-start">
                                       <label for="inputPassword6" class="form-label geser1">Customer</label>
@@ -245,7 +245,7 @@
                                   <div class="col-md-5">
                                   </div>
                               </div><br>
-                              <button type="submit" class="btn text-white btn-lg" style="background-color: #FF4550;">CONFIRM RESERVATION</button>
+                              <button type="submit" class="btn text-white btn-lg" style="background-color: #FF4550; font-size:14pt;">CONFIRM RESERVATION</button>
                           </div>
                       </div>
                   </div>
@@ -398,9 +398,11 @@
 
       <footer class="text-muted py-5" style="background-color: #d5e386;">
           <div class="container" style="background-color: #d5e386;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#d68d96" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
-              </svg>
+          <p class="float-end mb-1">
+              <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#d68d96" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+  <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+</svg></a>
+</p>
               <p class="mb-1">Copyright © 2022 DELILA S R. All rights reserved.</p>
           </div>
       </footer>

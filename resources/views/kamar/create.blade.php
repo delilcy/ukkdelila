@@ -64,7 +64,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="row">
                 <div class="col-lg-12 margin-tb">
                     <div class="pull-left">
-                        <h2>Tambah Data Kamar</h2>
+                        <h2>Tambah Jumlah Kamar</h2>
                     </div>
                     <div class="pull-right">
                         <a class="btn button-24" href="{{ route('kamar.index') }}"> Kembali</a>

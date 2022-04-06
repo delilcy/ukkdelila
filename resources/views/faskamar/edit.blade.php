@@ -100,8 +100,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <div class="form-group">
                             <strong>Tipe Kamar:</strong>
                              <select name="tipekamar" id="tipekamar" class="form-control">
-                                <option value="Deluxe">Deluxe</option>
-                                <option value="Superior">Superior</option>
+                                <option value="Deluxe">Deluxe Room</option>
+                                <option value="Superior">Superior Room</option>
                                 <option value="Presidential Suite">Suite Room</option>
                             </select>
                            

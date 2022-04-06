@@ -17,7 +17,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-top:5px;">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-top:8px;">
             <ul class="nav navbar-nav justify-content-center mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link fs-5" href="#">
@@ -25,10 +25,7 @@
                         Strawberries Hotel<span class="sr-only-bold">
 
                         </span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link fs-5" href="{{route('beranda')}}">Home</a>
-                </li>
+               
 
                 @guest
                 <li class="nav-item">

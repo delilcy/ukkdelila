@@ -7,6 +7,11 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Ingrid+Darling&family=Lavishly+Yours&family=Monoton&family=Rubik+Puddles&display=swap" rel="stylesheet">
 
     <style>
         .margin1 {
@@ -19,8 +24,9 @@
         }
 
         html {
-            -webkit-print-color-adjust: exact; 
+            -webkit-print-color-adjust: exact;
         }
+        
 
     </style>
 
@@ -30,7 +36,7 @@
     <div class="container p-5">
         <div class="card text-center" style="max-width: 70rem; ">
             <div class="card-header" style="background-color: #d5e386;">
-                <h2 style="background-color: #d5e386;">Bukti Reservasi</h2>
+                <h1 style="font-color: #dbc202;font-family: 'IM Fell English SC', serif;">Bukti Reservasi</h1>
             </div>
             <div class="card-body">
                 <div class="mb-3 row">
@@ -91,6 +97,7 @@
 
             </div>
             <div class="card-footer text-muted" style="background-color: #d5e386;">
+             <h1 style="font-color: #f70a0a;font-family: 'Lavishly Yours', cursive;">Strawberries Hotel</h1>
 
             </div>
         </div>
