@@ -84,7 +84,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </div>
             @endif
 
-            <form action="{{ route('faskamar.update', $fasilitaskmr[0]->id_faskmr) }}" method="POST">
+            <form action="{{ route('faskamar.update', $fasilitaskmr[0]->id_faskmr) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
 

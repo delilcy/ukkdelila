@@ -47,6 +47,8 @@ class reservasiController extends Controller
      */
     public function store(Request $request)
     {
+
+
         $request->validate([
             'tglcekin' => 'required',
             'tglcekout' => 'required',
@@ -117,8 +119,17 @@ class reservasiController extends Controller
      * @param  \App\reservasi  $reservasi
      * @return \Illuminate\Http\Response
      */
-    public function destroy(reservasi $reservasi)
+    public function destroy( $reservasi)
     {
-        //
+        // dd($reservasi);
+        $awal = DB::table('reservasi')->where('id_reservasi', $reservasi)->value('jml_kmr');
+        $tipe = DB::table('reservasi')->where('id_reservasi', $reservasi)->value('tipe_kmr');
+        $alfa = DB::table('kamar')->where('tipe_kamar', $tipe)->value('jml_kamar');
+        $akhir = $awal + $alfa;
+        DB::table('kamar')->where('tipe_kamar',  $tipe)->update([
+            'jml_kamar' => $akhir,
+        ]);
+        $hapus = DB::table('reservasi')->where('id_reservasi', $reservasi)->delete();
+        return redirect()->route('reservasi.index');
     }
 }

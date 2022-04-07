@@ -134,6 +134,7 @@
               <div class="row py-lg-5">
                   <div class="col-lg-6 col-md-8 mx-auto">
                       <h1 class="fw-bold">Welcome to Strawberries Hotel</h1>
+                      <p class="font-monospace fs-2">A Best Place To Stay</p>
                       <p class="font-monospace">Curating the world's best luxury hotel experience for you </p>
 
                   </div>
@@ -159,25 +160,25 @@
                   <div class="row g-2 geser">
                       <div class="col-md">
                           <div class="form-floating">
-                              <input type="date" name="tglcekin" class="form-control border border-warning border-2" id="floatingInputGrid">
+                              <input type="date" name="tglcekin" class="form-control border border-warning border-2" id="tglcekin" required>
                               <label for="floatingInputGrid geser">Check In</label>
                           </div>
                       </div>
                       <div class="col-md">
                           <div class="form-floating">
-                              <input type="date" name="tglcekout" class="form-control border border-warning border-2" id="floatingInputGrid">
+                              <input type="date" name="tglcekout" class="form-control border border-warning border-2" id="tglcekout" required>
                               <label for="floatingInputGrid">Check Out</label>
                           </div>
                       </div>
                       <div class="col-md">
                           <div class="form-floating">
-                              <input type="number" name="jml_kmr" class="form-control border border-warning border-2" id="floatingInputGrid">
+                              <input type="number" name="jml_kmr" class="form-control border border-warning border-2" id="jml_kmr" required>
                               <label for="floatingInputGrid">Room</label>
                           </div>
                       </div>
                       <div class="col-md">
                           <div class="form-floating">
-                              <a class="btn text-white btn-lg" style="height:56px; padding-top:10px; left:500px; background-color: #FF4550;" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                              <a class="btn text-white btn-lg" id="book" style="height:56px; padding-top:10px; left:500px; background-color: #FF4550;" onclick="isEmpty()">
                                   Book Now
                               </a>
                           </div>
@@ -186,14 +187,14 @@
                   </div>
                   <br>
                   <div class="collapse geser" id="collapseExample">
-                      <div class="card border text-center" style="width: 720px;">
+                      <div class="card border text-center" style="width: 870px;">
                           <div class="card-body" style="background-color: #fceeac;">
                               <div class="row g-2 align-items-center" style="margin-left:150px;">
                                   <div class="col-3 text-start">
                                       <label for="inputPassword6" class="form-label geser1">Customer</label>
                                   </div>
                                   <div class="col-md-5">
-                                      <input type="text" name="nm_pemesan" class="form-control" aria-describedby="passwordHelpInline" placeholder="name">
+                                      <input type="text" name="nm_pemesan" class="form-control" aria-describedby="passwordHelpInline" placeholder="name" required>
                                   </div>
                                   <div class="col-md-5">
                                   </div>
@@ -409,7 +410,25 @@
 
 
       <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 
+    <script>
+    $("#book").click(function(){
+  
+        
+            
+        
+});
+       function isEmpty() {
+           if (document.getElementById('jml_kmr').value.length > 0) {
+                if (document.getElementById('tglcekin').value.length > 0) {
+                    if (document.getElementById('tglcekout').value.length > 0) {
+                        $('#collapseExample').collapse('show');
+                    }
+                }
+            }
+       }
+    </script>
 
   </body>
   </html>

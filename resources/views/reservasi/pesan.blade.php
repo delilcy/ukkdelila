@@ -20,7 +20,7 @@
             <ul class="navbar-nav justify-content-center mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">
-                        <img src="{{ asset('img/strawberries-removebg-preview (1).png') }}" width="30" height="30" class="d-inline-block align-top" alt="" style="margin-top:-10px;">
+                        <img src="{{ asset('img/strawberries-removebg-preview (1).png') }}" width="30" height="30" class="d-inline-block align-top" alt="" style="margin-top:-7px;">
                         Strawberries Hotel<span class="sr-only-bold">
 
                         </span></a>

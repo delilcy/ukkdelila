@@ -130,9 +130,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 
                             @csrf
-                            @method('DELETE')
 
-                            <button type="submit" class="btn btn-danger">Hapus</button>
+                            <button type="submit" class="btn btn-danger">Check out</button>
                         </form>
                     </td>
                 </tr>

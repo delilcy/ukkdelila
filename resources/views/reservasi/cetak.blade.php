@@ -36,7 +36,7 @@
     <div class="container p-5">
         <div class="card text-center" style="max-width: 70rem; ">
             <div class="card-header" style="background-color: #d5e386;">
-                <h1 style="font-color: #dbc202;font-family: 'IM Fell English SC', serif;">Bukti Reservasi</h1>
+                <h1 style="font-color: #dbc202;font-family: 'IM Fell English SC', serif;">LETTERHEAD</h1>
             </div>
             <div class="card-body">
                 <div class="mb-3 row">

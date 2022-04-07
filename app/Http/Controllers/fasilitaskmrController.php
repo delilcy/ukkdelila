@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Intervention\Image\Facades\Image;
 
+
 class fasilitaskmrController extends Controller
 {
     /**
@@ -103,6 +104,29 @@ class fasilitaskmrController extends Controller
             'tipekamar' => 'required',
             
         ]);
+        if ($request->gambar != null ) {
+            $image = $request->file('gambar');
+            $nameImage = $request->file('gambar')->getClientOriginalName();
+        
+            $thumbImage = Image::make($image->getRealPath())->resize(100, 100);
+            $thumbPath = public_path() . '/fasilitaskmr/' . $nameImage;
+            $thumbImage = Image::make($thumbImage)->save($thumbPath);
+            
+            $ubahImage = Image::make($image->getRealPath())->resize(3000, 2000);
+            $oriPath = public_path() . '/fasilitaskmr2/' . $nameImage;
+            $oriImage = Image::make($ubahImage)->save($oriPath);
+
+            $update = DB::table('fasilitaskmr')
+            ->where('id_faskmr', $request->id_faskmr)
+            ->update([
+                'nm_faskmr' => $request->nm_faskmr,
+                'tipekamar' => $request->tipekamar,
+                'gambar' => $nameImage,
+            ]);
+
+            return redirect()->route('faskamar.index')->with('success','Data berhasil di update');
+        }
+        
         // dd($request->id_faskmr);
         $update = DB::table('fasilitaskmr')
               ->where('id_faskmr', $request->id_faskmr)
@@ -111,6 +135,7 @@ class fasilitaskmrController extends Controller
                   'tipekamar' => $request->tipekamar,
                   
               ]);
+              
         return redirect()->route('faskamar.index')->with('success','Data berhasil di update');
     }
 

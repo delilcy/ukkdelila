@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Pesan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PesanController extends Controller
 {
@@ -25,18 +26,26 @@ class PesanController extends Controller
             'notlp' => 'required',
             
         ]);
-        // dd($request);
+        $awal = DB::table('kamar')->where('tipe_kamar', $request->tipe_kmr)->value('jml_kamar');
+
+        $akhir = $awal - $request->jml_kmr;
+        // dd($akhir);
 
             Pesan::create([
                 'tglcekin' => $request->tglcekin,
                 'tglcekout' => $request->tglcekout,
-                'jml_kmr' => $request->jml_kmr,
                 'nm_pemesan' => $request->nm_pemesan,
                 'nm_tamu' => $request->nm_tamu,
+                'jml_kmr' => $request->jml_kmr,
                 'email' => $request->email,
                 'notlp' => $request->notlp,
                 'tipe_kmr' => $request->tipe_kmr,
             ]);
+
+            DB::table('kamar')->where('tipe_kamar',  $request->tipe_kmr)->update([
+                'jml_kamar' => $akhir,
+            ]);
+
 
             return redirect()->route('beranda')->with('success','Data berhasil di input');
     }

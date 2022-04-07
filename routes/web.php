@@ -42,6 +42,7 @@ Route::middleware('role:resepsionis')->resource('resepsionis','resepsionisContro
 Route::resource('reservasi','reservasiController');
 Route::post('/resepsionis/search', 'reservasiController@search')->name('search');
 Route::post('/resepsionis/filter', 'reservasiController@filter')->name('reservasi.filter');
+Route::post('/reservasi/cekout/{reservasi}', 'reservasiController@destroy')->name('reservasi.destroy');
 
 Route::post('/pesan', 'PesanController@index')->name('pesan');
 
