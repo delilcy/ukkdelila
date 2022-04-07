@@ -238,9 +238,9 @@
 
                                       <select name="tipe_kmr" class="form-select form-select-sm" aria-label=".form-select-sm example">
                                           <option selected class="form-select" aria-label="Disabled select example" disabled>select one</option>
-                                          <option value="Superior">Superior Room</option>
-                                          <option value="Deluxe">Deluxe Room</option>
-                                          <option value="Presidential Suite">Suite Room</option>
+                                          <option value="Superior" @if($superior <= 0) disabled @endif>Superior Room -- Room Available = {{ $superior }} --</option>
+                                          <option value="Deluxe" @if($deluxe <= 0) disabled @endif>Deluxe Room -- Room Available = {{ $deluxe }} --</option>
+                                          <option value="Presidential Suite" @if($suite <= 0) disabled @endif>Suite Room -- Room Available = {{ $suite }} --</option>
                                       </select>
                                   </div>
                                   <div class="col-md-5">

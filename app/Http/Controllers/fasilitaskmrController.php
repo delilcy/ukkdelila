@@ -18,7 +18,8 @@ class fasilitaskmrController extends Controller
     public function index()
     {
         $fasilitaskmr = fasilitaskmr::latest()->paginate(5);
-        return view('faskamar.index',compact('fasilitaskmr'));
+        $halaman = fasilitaskmr::latest()->paginate(5)->currentPage();
+        return view('faskamar.index',compact('fasilitaskmr', 'halaman'));
     }
 
     /**
@@ -104,6 +105,7 @@ class fasilitaskmrController extends Controller
             'tipekamar' => 'required',
             
         ]);
+        
         if ($request->gambar != null ) {
             $image = $request->file('gambar');
             $nameImage = $request->file('gambar')->getClientOriginalName();

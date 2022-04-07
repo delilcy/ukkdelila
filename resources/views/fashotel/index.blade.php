@@ -10,6 +10,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         .main-sidebar {
             min-height: 106% !important;
         }
+
         .button-24 {
             background: #d68d96;
             border: 1px solid #d68d96;
@@ -77,7 +78,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <br>
             @if ($message = Session::get('success'))
             <div class="alert alert-danger">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 <p>{{ $message }}</p>
@@ -94,9 +95,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <th class="bg-danger">Gambar</th>
                             <th class="bg-danger" width="280px">Action</th>
                         </tr>
+                        @php
+                        $a = 5 * $halaman;
+                        $b = 5 * ( $halaman - 1 );
+                        @endphp
                         @foreach ($fasilitashotel as $i => $fas)
                         <tr>
-                            <td>{{ ++$i }}</td>
+                            <td>@if($halaman > 1) {{ ++$b }} @else {{ ++$i }} @endif</td>
                             <td>{{ $fas->nm_fashotel }}</td>
                             <td>{{ $fas->keterangan }}</td>
                             <td>
@@ -120,7 +125,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </div>
             </div>
             <!-- /.content-wrapper -->
-{!! $fasilitashotel->links() !!}
+            {!! $fasilitashotel->links() !!}
         </div>
         <!-- Control Sidebar -->
     </div>

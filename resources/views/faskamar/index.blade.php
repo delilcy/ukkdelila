@@ -90,9 +90,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <th class="bg-danger">Gambar</th>
                     <th class="bg-danger" width="280px">Action</th>
                 </tr>
+                @php
+                    $a = 5 * $halaman;
+                    $b = 5 * ( $halaman - 1 );
+                @endphp
                 @foreach ($fasilitaskmr as $i => $fas)
                 <tr>
-                    <td>{{ ++$i }}</td>
+                    <td>@if($halaman > 1) {{ ++$b }} @else {{ ++$i }} @endif</td>
                     <td>{{ $fas->nm_faskmr }}</td>
                     <td>{{ $fas->tipekamar }}</td>
                     <td>

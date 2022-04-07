@@ -42,6 +42,9 @@ Route::middleware('role:resepsionis')->resource('resepsionis','resepsionisContro
 Route::resource('reservasi','reservasiController');
 Route::post('/resepsionis/search', 'reservasiController@search')->name('search');
 Route::post('/resepsionis/filter', 'reservasiController@filter')->name('reservasi.filter');
+Route::get('/resepsionis/checkin/{id_reservasi}', 'reservasiController@checkin')->name('reservasi.checkin');
+Route::get('/resepsionis/checkout/{id_reservasi}', 'reservasiController@checkout')->name('reservasi.checkout');
+Route::post('/resepsionis/cancel/{id_reservasi}', 'reservasiController@cancel')->name('reservasi.cancel');
 Route::post('/reservasi/cekout/{reservasi}', 'reservasiController@destroy')->name('reservasi.destroy');
 
 Route::post('/pesan', 'PesanController@index')->name('pesan');

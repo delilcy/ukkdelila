@@ -14,11 +14,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </style>
 
     <script>
-        $(document).ready(function(){
+        $(document).ready(function() {
             $('.    -me').datepicker({
-                format: 'dd-mm-yyyy',
-            });
+                format: 'dd-mm-yyyy'
+            , });
         });
+
     </script>
 </head>
 <body class="hold-transition sidebar-mini">
@@ -85,7 +86,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <div class="col col-md-6">
                                     <input type="date" name="tglcekin" class="form-control" id="tglcekin" style="width: 180px;">
                                 </div>
-                                <div class="col col-md-5"  style="position:relative; left:60px;">
+                                <div class="col col-md-5" style="position:relative; left:60px;">
                                     <button class="btn btn-warning" type="submit">cari</button>
                                 </div>
 
@@ -111,29 +112,47 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <th class="bg-danger">Tanggal Check-out</th>
                     <th class="bg-danger">Tipe Kamar</th>
                     <th class="bg-danger">Jumlah Kamar</th>
+                    <th class="bg-danger">Status</th>
                     <th class="bg-danger" width="280px">Action</th>
                 </tr>
+                @php
+                $a = 5 * $halaman;
+                $b = 5 * ( $halaman - 1 );
+                @endphp
                 @foreach ($reservasi as $i => $res)
                 <tr>
-                    <td>{{ ++$i }}</td>
+                    <td>@if($halaman > 1) {{ ++$b }} @else {{ ++$i }} @endif</td>
                     <td>{{ $res->nm_pemesan}}</td>
                     <td>{{ $res->nm_tamu }}</td>
                     <td>{{ $res->tglcekin }}</td>
                     <td>{{ $res->tglcekout }}</td>
                     <td>{{ $res->tipe_kmr}}</td>
                     <td>{{ $res->jml_kmr}}</td>
+                    @if( $res->status == 'checkin' )
+                    <td>Belum Check In</td>
                     <td>
-                        <form action="{{ route('reservasi.destroy', $res->id_reservasi) }}" method="POST">
-
-                            <a class="btn btn-info" href="{{ route('reservasi.show',$res->id_reservasi) }}">Tampil</a>
-
-
-
+                        <form action="{{ route('reservasi.cancel', $res->id_reservasi) }}" method="POST">
+                            <a class="btn btn-info" href="{{ route('reservasi.checkin',$res->id_reservasi) }}">CheckIn</a>
                             @csrf
-
-                            <button type="submit" class="btn btn-danger">Check out</button>
+                            <button type="submit" class="btn btn-danger">Cancel</button>
                         </form>
                     </td>
+                    @elseif( $res->status == 'checkout' )
+                    <td>Belum Check Out</td>
+                    <td>
+                        <form action="{{ route('reservasi.cancel', $res->id_reservasi) }}" method="POST">
+                            <a class="btn btn-info" href="{{ route('reservasi.checkout',$res->id_reservasi) }}">CheckOut</a>
+                            @csrf
+                            <button type="submit" class="btn btn-danger">Cancel</button>
+                        </form>
+                    </td>
+                    @elseif( $res->status == 'done' )
+                    <td>Sudah Check-Out</td>
+                    <td></td>
+                    @else
+                    <td>Pemesanan dibatalkan</td>
+                    <td></td>
+                    @endif
                 </tr>
                 @endforeach
             </table>
@@ -141,10 +160,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
             {!! $reservasi->links() !!}
         </div>
         <!-- /.content-wrapper -->
-        </div>
-        <!-- Control Sidebar -->
-        </div>
-        <!-- <aside class="control-sidebar control-sidebar-dark">
+    </div>
+    <!-- Control Sidebar -->
+    </div>
+    <!-- <aside class="control-sidebar control-sidebar-dark">
     Control sidebar content goes here
     <div class="p-3">
       <h5>Title</h5>
@@ -153,10 +172,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
   </aside>
   /.control-sidebar -->
 
-        <!-- Main Footer -->
-        <footer class="main-footer" style="background-color: #c284a6;">
-            @include('template.footer')
-        </footer>
+    <!-- Main Footer -->
+    <footer class="main-footer" style="background-color: #c284a6;">
+        @include('template.footer')
+    </footer>
     </div>
     <!-- ./wrapper -->
 

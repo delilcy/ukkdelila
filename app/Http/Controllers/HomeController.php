@@ -31,8 +31,11 @@ class HomeController extends Controller
         
         $faskmr=DB::table('fasilitaskmr')->get();
         $fashotel=DB::table('fasilitashotel')->get();
+        $superior = DB::table('kamar')->where('tipe_kamar', 'Superior')->value('jml_kamar');
+        $deluxe = DB::table('kamar')->where('tipe_kamar', 'Deluxe')->value('jml_kamar');
+        $suite = DB::table('kamar')->where('tipe_kamar', 'Suite Room')->value('jml_kamar');
         // dd($faskmr, $fashotel);
-        return view('beranda', compact('faskmr', 'fashotel'));
+        return view('beranda', compact('faskmr', 'fashotel', 'superior', 'deluxe', 'suite'));
         
     }
     public function halaman()

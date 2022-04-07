@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8" style="top:65px;">
+        <div class="col-md-8" style="top:150px;">
             <div class="card" style="position: relative; z-index: 1; max-width: 360px; margin: 0 auto 100px; padding: 45px;   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);">
                 <p style="text-align: center; font-size: 24pt;">
                     {{ __('Login') }}
