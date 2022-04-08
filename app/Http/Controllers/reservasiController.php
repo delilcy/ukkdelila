@@ -23,23 +23,44 @@ class reservasiController extends Controller
     public function search(Request $request)
     {
         $reservasi=  DB::table('reservasi')->where('nm_tamu', $request->nm_tamu )->paginate(5);
-        return view('reservasi.index', compact('reservasi'));
+        $halaman = DB::table('reservasi')->where('nm_tamu', $request->nm_tamu )->paginate(5)->currentPage();
+
+        return view('reservasi.index', compact('reservasi', 'halaman'));
     }
     
     public function filter(Request $request)
     {
         $reservasi=  DB::table('reservasi')->where('tglcekin', $request->tglcekin )->paginate(5);
-        return view('reservasi.index', compact('reservasi'));
+        $halaman = DB::table('reservasi')->where('nm_tamu', $request->nm_tamu )->paginate(5)->currentPage();
+        return view('reservasi.index', compact('reservasi', 'halaman'));
     }
 
     public function checkin($id_reservasi)
     {
+        $tipe_kamar = DB::table('reservasi')->where('id_reservasi', $id_reservasi)->value('tipe_kmr');
+        $jumlah_kamar = DB::table('reservasi')->where('id_reservasi', $id_reservasi)->value('jml_kmr');
+        $awal = DB::table('kamar')->where('tipe_kamar', $tipe_kamar)->value('jml_kamar');
+        
+        $akhir = $awal - $jumlah_kamar;
+        // dd($tipe_kamar, $jumlah_kamar, $awal, $akhir );
+        DB::table('kamar')->where('tipe_kamar',  $tipe_kamar)->update([
+            'jml_kamar' => $akhir,
+        ]);
         $change = DB::table('reservasi')->where('id_reservasi', $id_reservasi)->update([ 'status' => 'checkout' ]);
         return redirect()->route('reservasi.index')->with('success','Pesanan berhasil Check In!');
     }
 
     public function checkout($id_reservasi)
     {
+        $tipe_kamar = DB::table('reservasi')->where('id_reservasi', $id_reservasi)->value('tipe_kmr');
+        $jumlah_kamar = DB::table('reservasi')->where('id_reservasi', $id_reservasi)->value('jml_kmr');
+        $awal = DB::table('kamar')->where('tipe_kamar', $tipe_kamar)->value('jml_kamar');
+        
+        $akhir = $awal + $jumlah_kamar;
+        // dd($tipe_kamar, $jumlah_kamar, $awal, $akhir );
+        DB::table('kamar')->where('tipe_kamar',  $tipe_kamar)->update([
+            'jml_kamar' => $akhir,
+        ]);
         $change = DB::table('reservasi')->where('id_reservasi', $id_reservasi)->update([ 'status' => 'done' ]);
         return redirect()->route('reservasi.index')->with('success','Pesanan berhasil Check Out!');
     }
@@ -47,7 +68,7 @@ class reservasiController extends Controller
     public function cancel($id_reservasi)
     {
         $change = DB::table('reservasi')->where('id_reservasi', $id_reservasi)->update([ 'status' => 'cancel' ]);
-        return redirect()->route('reservasi.index')->with('success','Pesanan berhasil Check In!');
+        return redirect()->route('reservasi.index')->with('success','Pesanan dibatalkan!');
     }
 
     /**

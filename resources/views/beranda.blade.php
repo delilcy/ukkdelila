@@ -304,7 +304,7 @@
                               <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef" dy=".3em"></text></img>
 
                               <div class="card-body">
-                                  <p class="card-text">Suite Room</p>
+                                  <p class="card-text">Presidential Suite</p>
                                   <div class="d-flex justify-content-between align-items-center">
 
 

@@ -101,7 +101,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                              <select name="tipekamar" id="tipekamar" class="form-control">
                                 <option value="Deluxe">Deluxe Room</option>
                                 <option value="Superior">Superior Room</option>
-                                <option value="Presidential Suite">Suite Room</option>
+                                <option value="Presidential Suite">Presidential Suite</option>
                             </select>
                            
                         </div>

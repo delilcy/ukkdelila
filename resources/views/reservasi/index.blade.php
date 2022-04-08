@@ -84,7 +84,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             @csrf
                             <div class="row row-md-5">
                                 <div class="col col-md-6">
-                                    <input type="date" name="tglcekin" class="form-control" id="tglcekin" style="width: 180px;">
+                                    <input type="date" name="tglcekin" class="form-control" id="tglcekin" style="width: 180px;" placeholder="checkin">
                                 </div>
                                 <div class="col col-md-5" style="position:relative; left:60px;">
                                     <button class="btn btn-warning" type="submit">cari</button>

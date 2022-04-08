@@ -40,6 +40,8 @@ class PesanController extends Controller
                 'email' => $request->email,
                 'notlp' => $request->notlp,
                 'tipe_kmr' => $request->tipe_kmr,
+               'status' => 'checkin'
+
             ]);
 
             DB::table('kamar')->where('tipe_kamar',  $request->tipe_kmr)->update([
